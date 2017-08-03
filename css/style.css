@@ -35,7 +35,6 @@ a[id="contact"]:target {
 .header {
   display: block;
   position: fixed;
-  border: 1px solid red;
   left: 0;
   top: 0;
   padding-top: 1rem;
@@ -62,9 +61,7 @@ a[id="contact"]:target {
       margin-left: 0; }
 
 .nav {
-  position: relative;
-  border: 1px solid blue;
-  text-align: left; }
+  position: relative; }
   .nav__link {
     color: #fff; }
   .nav__item {
@@ -192,9 +189,6 @@ a[id="contact"]:target {
   .about__item:hover, .who__item:hover {
     box-shadow: 8px 8px 0 0 rgba(149, 225, 211, 0.7);
     transform: translate(-8px, -8px); }
-
-.nav__link--active {
-  border: 1px solid yellow; }
 
 .facts {
   background-color: #95e1d3; }
