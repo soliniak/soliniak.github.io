@@ -135,6 +135,8 @@ let btn = document.querySelectorAll(".arrow--service");
 
 }
 document.addEventListener("DOMContentLoaded", function () {
-  init();
-  active();
+	window.onload = function () {
+	  init();
+	  active();
+  	}
 });

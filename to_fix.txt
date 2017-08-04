@@ -1,6 +1,6 @@
 To do:
 - fix underline in menu item - done // getBoundingClientRect changed to offsetLeft //
-- fix width at start pos of underline
+- fix width of underline at start / width 40 should be 46 / - done //  js was loading before css. Adding window.onload into DOMContentLoaded fixed the problem //
 - underline moves depending on section
 - padding in subscribe
 - lower resolution of pictures
