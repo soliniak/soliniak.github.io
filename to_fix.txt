@@ -1,6 +1,6 @@
 To do:
 - fix underline in menu item - done // getBoundingClientRect changed to offsetLeft //
-- fix start pos of underline
+- fix width at start pos of underline
 - underline moves depending on section
 - padding in subscribe
 - lower resolution of pictures
