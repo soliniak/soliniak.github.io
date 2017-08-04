@@ -32,6 +32,21 @@ a
 a[ id= "contact" ]:target
 	transition: all 3s linear
 
+$getMini: "../img/mini/"
+$getBig: "../img/"
+
+// od #fce38a do #f38181, opacity .9
+@mixin gradient()
+	$start: #fce38a
+	$end:  #f38181
+	background: linear-gradient($start, $end)
+	background: $start; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient($start, $end); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient($start, $end); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient($start, $end); /* For Firefox 3.6 to 15 */
+	background: linear-gradient($start, $end); /* Standard syntax */
+	opacity: .9
+
 .container
 	max-width: 1200px
 	margin: 0 auto
@@ -96,7 +111,7 @@ a[ id= "contact" ]:target
 	width: 100%
 
 	&__slide
-		background-image: url('../img/banner-img.png')
+		background-image: url("#{$getMini}banner-img.png")
 		background-size: cover
 		background-position: 50% 50%
 		background-repeat: no-repeat
@@ -166,6 +181,7 @@ a[ id= "contact" ]:target
 		justify-content: space-between
 .about, .who
 	&__item
+		position: relative
 		display: inline-block
 		height: 250px
 		width: 380px
@@ -179,6 +195,7 @@ a[ id= "contact" ]:target
 
 		&:hover .about__item--description, &:hover .who__item--description
 			visibility: visible
+			z-index: 2
 
 		&--description
 			font-family: $big_one
@@ -187,15 +204,28 @@ a[ id= "contact" ]:target
 			visibility: hidden
 
 		&--team
-			background-image: url('../img/about-img1.png')
+			background-image: url('#{$getBig}about-img1.png')
 		&--flow
-			background-image: url('../img/about-img2.png')
+			background-image: url('#{$getBig}about-img2.png')
 		&--capabilities
-			background-image: url('../img/about-img3.png')
+			background-image: url('#{$getBig}about-img3.png')
 
 		&:hover
 			box-shadow: 8px 8px 0 0 rgba($blueish, .7)
 			transform: translate(-8px, -8px)
+
+			& > .overlay
+					opacity: 1
+					@include gradient
+
+.overlay
+	position: absolute
+	top: 0
+	left: 0
+	height: 100%
+	width: 100%
+	// opacity: 0
+	z-index: -1
 
 .facts
 	background-color: $blueish
@@ -256,7 +286,7 @@ a[ id= "contact" ]:target
 		padding-top: 8rem
 	&::after
 		content: ''
-		background-image: url('../img/feature-bg-img.png')
+		background-image: url('#{$getMini}feature-bg-img.png')
 		background-position: 50% 35%
 		background-size: cover
 		background-repeat: no-repeat
@@ -279,7 +309,7 @@ a[ id= "contact" ]:target
 			bottom: 0
 			
 		&--ipad
-			background-image: url('../img/feature-ipad-img.png')
+			background-image: url('#{$getBig}feature-ipad-img.png')
 			background-position: 50% 50%
 			background-size: contain
 			background-repeat: no-repeat
@@ -288,7 +318,7 @@ a[ id= "contact" ]:target
 			position: absolute
 			bottom: -195px
 		&--iphone
-			background-image: url('../img/feature-iphone-img.png')
+			background-image: url('#{$getBig}feature-iphone-img.png')
 			background-position: 50% 50%
 			background-size: contain
 			background-repeat: no-repeat
@@ -306,7 +336,7 @@ a[ id= "contact" ]:target
 	&--img
 		width: 570px 
 		height: 380px
-		background-image: url('../img/what-do-we-do-img.png')
+		background-image: url('#{$getBig}what-do-we-do-img.png')
 		background-size: cover
 		background-repeat: no-repeat
 	&--info
@@ -414,13 +444,13 @@ a[ id= "contact" ]:target
 		padding: 0
 
 		&--matt
-			background-image: url('../img/our-team-img-1.png') 
+			background-image: url('#{$getBig}our-team-img-1.png') 
 
 		&--chris
-			background-image: url('../img/our-team-img-2.png') 
+			background-image: url('#{$getBig}our-team-img-2.png') 
 
 		&--michael
-			background-image: url('../img/our-team-img-3.png') 
+			background-image: url('#{$getBig}our-team-img-3.png') 
 
 		&--description
 			width: 100%
@@ -472,16 +502,20 @@ a[ id= "contact" ]:target
 		overflow: hidden
 
 	&-item
+		display: flex
+		justify-content: center
+		align-items: center
+
 		&-a
-			background: url('../img/our-work-img-1x.png') no-repeat
+			background: url('#{$getBig}our-work-img-1x.png') no-repeat
 			background-size: cover
 			background-position: center
 		&-b
-			background: url('../img/our-work-img-2x.png') no-repeat
+			background: url('#{$getBig}our-work-img-2x.png') no-repeat
 			background-size: cover
 			background-position: center
 		&-c
-			background: url('../img/our-work-img-3x.png') no-repeat
+			background: url('#{$getBig}our-work-img-3x.png') no-repeat
 			background-size: cover
 			background-position: center
 			grid-column-start: 3
@@ -490,26 +524,53 @@ a[ id= "contact" ]:target
 			grid-row-end: span 2
 
 		&-d
-			background: url('../img/our-work-img-4x.png') no-repeat
+			background: url('#{$getBig}our-work-img-4x.png') no-repeat
 			background-size: cover
 			background-position: center
 		&-e
-			background: url('../img/our-work-img-5x.png') no-repeat
+			background: url('#{$getBig}our-work-img-5x.png') no-repeat
 			background-size: cover
 			background-position: center
 		&-f
-			background: url('../img/our-work-img-6x.png') no-repeat
+			background: url('#{$getBig}our-work-img-6x.png') no-repeat
 			background-size: cover
 			background-position: center
 		&-g
-			background: url('../img/our-work-img-7x.png') no-repeat
+			background: url('#{$getBig}our-work-img-7x.png') no-repeat
 			background-size: cover
 			background-position: center
 		&:hover
-
 			transform: scale(1.03)
 			transition: all .1s ease-in-out
 
+			& > .overlay
+				opacity: 1
+				@include gradient
+			& > .desc-container
+				visibility: visible
+
+
+.desc-container
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	visibility: hidden
+
+.item-description
+	z-index: 2
+	color: #ffffff
+	font-family: $big_regular
+	text-transform: uppercase
+	margin-top: 1rem
+
+.item-subdescription
+	z-index: 2
+	color: #ffffff
+	font-family: $roboto_lightitalic
+	margin-top: 1rem
+	&:first-letter
+		text-transform: capitalize
 
 
 .testimonials
@@ -518,7 +579,7 @@ a[ id= "contact" ]:target
 	position: relative
 	&::after
 		content: ''
-		background-image: url('../img/testimonial-bg-img.png')
+		background-image: url('#{$getMini}testimonial-bg-img.png')
 		background-position: 50% 50%
 		background-size: cover
 		background-repeat: no-repeat
@@ -551,7 +612,7 @@ a[ id= "contact" ]:target
 				float: left
 
 				.person-1
-					background-image: url('../img/person-1.jpg')
+					background-image: url('#{$getBig}person-1.jpg')
 					background-size: 230px
 					background-repeat: no-repeat
 					background-position: center top
@@ -559,7 +620,7 @@ a[ id= "contact" ]:target
 					height: 100px
 					width: 100px
 				.person-2
-					background-image: url('../img/person-2.jpg')
+					background-image: url('#{$getBig}person-2.jpg')
 					background-size: 200px
 					background-repeat: no-repeat
 					background-position: 55% center
@@ -567,7 +628,7 @@ a[ id= "contact" ]:target
 					height: 100px
 					width: 100px
 				.person-3
-					background-image: url('../img/person-3.jpg')
+					background-image: url('#{$getBig}person-3.jpg')
 					background-size: 230px
 					background-repeat: no-repeat
 					background-position: center top
@@ -575,7 +636,7 @@ a[ id= "contact" ]:target
 					height: 100px
 					width: 100px
 				.person-4
-					background-image: url('../img/person-4.jpg')
+					background-image: url('#{$getBig}person-4.jpg')
 					background-size: 230px
 					background-repeat: no-repeat
 					background-position: center 30%
@@ -688,7 +749,7 @@ a[ id= "contact" ]:target
 	&__bg
 		content: ''
 
-		background: url('../img/map-bg-img.png') center center no-repeat
+		background: url('#{$getMini}map-bg-img.png') center center no-repeat
 		background-size: cover
 		opacity: .15
 		position: absolute
@@ -766,12 +827,21 @@ a[ id= "contact" ]:target
 	&__input
 		height: 40px
 		width: 230px
-		padding: 1rem
+		padding-left: 1rem
 		display: block
 		float: left
 		box-sizing: border-box
 		border: 1px solid #e7e7e7
 		&::-webkit-input-placeholder
+			font-family: $roboto_lightitalic
+			color: #cccccc
+		&::-moz-placeholder
+			font-family: $roboto_lightitalic
+			color: #cccccc
+		&:-ms-input-placeholder
+			font-family: $roboto_lightitalic
+			color: #cccccc	
+		&:-moz-placeholder
 			font-family: $roboto_lightitalic
 			color: #cccccc
 	&__button
@@ -823,7 +893,7 @@ a[ id= "contact" ]:target
 		font-size: .7rem
 		text-transform: none
 .arrow
-	background: url('../img/arrow.png') center center no-repeat
+	background: url('#{$getBig}arrow.png') center center no-repeat
 	display: block
 	border: none
 
@@ -900,7 +970,7 @@ a[ id= "contact" ]:target
 		display: block
 		float: left
 	&-quote2
-		background-image: url('../img/testimonial-img.jpg')
+		background-image: url('#{$getMini}testimonial-img.jpg')
 		background-size: cover
 		background-position: center center
 		display: block
@@ -926,6 +996,11 @@ a[ id= "contact" ]:target
 		margin-right: .2rem
 		position: relative
 		top: 3px
+	&-picture
+		background: url('../img/icons/picture-icon.png') center center no-repeat
+		background-size: contain
+		width: 28px
+		height: 28px
 
 section, article
 	width: 100%

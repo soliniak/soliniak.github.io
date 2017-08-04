@@ -80,7 +80,7 @@ active = function () {
 		left: document.querySelector(".nav__link--active").offsetLeft,
 		width: document.querySelector(".nav__link--active").offsetWidth
 	}
-console.log(active.width);
+
 	underline.style.left =  active.left + "px";
 	underline.style.width = active.width + "px";
 }

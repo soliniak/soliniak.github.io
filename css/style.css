@@ -88,7 +88,7 @@ a[id="contact"]:target {
 .slider {
   width: 100%; }
   .slider__slide {
-    background-image: url("../img/banner-img.png");
+    background-image: url("../img/mini/banner-img.png");
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -159,6 +159,7 @@ a[id="contact"]:target {
   justify-content: space-between; }
 
 .about__item, .who__item {
+  position: relative;
   display: inline-block;
   height: 250px;
   width: 380px;
@@ -170,7 +171,8 @@ a[id="contact"]:target {
   justify-content: center;
   transition: all .15s linear; }
   .about__item:hover .about__item--description, .about__item:hover .who__item--description, .who__item:hover .about__item--description, .who__item:hover .who__item--description {
-    visibility: visible; }
+    visibility: visible;
+    z-index: 2; }
   .about__item--description, .who__item--description {
     font-family: Montserrat-Bold;
     text-transform: uppercase;
@@ -185,6 +187,28 @@ a[id="contact"]:target {
   .about__item:hover, .who__item:hover {
     box-shadow: 8px 8px 0 0 rgba(149, 225, 211, 0.7);
     transform: translate(-8px, -8px); }
+    .about__item:hover > .overlay, .who__item:hover > .overlay {
+      opacity: 1;
+      background: linear-gradient(#fce38a, #f38181);
+      background: #fce38a;
+      /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient(#fce38a, #f38181);
+      /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(#fce38a, #f38181);
+      /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(#fce38a, #f38181);
+      /* For Firefox 3.6 to 15 */
+      background: linear-gradient(#fce38a, #f38181);
+      /* Standard syntax */
+      opacity: .9; }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1; }
 
 .facts {
   background-color: #95e1d3; }
@@ -245,7 +269,7 @@ a[id="contact"]:target {
     padding-top: 8rem; }
   .feature::after {
     content: '';
-    background-image: url("../img/feature-bg-img.png");
+    background-image: url("../img/mini/feature-bg-img.png");
     background-position: 50% 35%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -444,48 +468,83 @@ a[id="contact"]:target {
   grid-template-rows: 50% 50%;
   overflow: hidden; }
 
-.portfolio-item-a {
-  background: url("../img/our-work-img-1x.png") no-repeat;
-  background-size: cover;
-  background-position: center; }
+.portfolio-item {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .portfolio-item-a {
+    background: url("../img/our-work-img-1x.png") no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .portfolio-item-b {
+    background: url("../img/our-work-img-2x.png") no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .portfolio-item-c {
+    background: url("../img/our-work-img-3x.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: span 2; }
+  .portfolio-item-d {
+    background: url("../img/our-work-img-4x.png") no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .portfolio-item-e {
+    background: url("../img/our-work-img-5x.png") no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .portfolio-item-f {
+    background: url("../img/our-work-img-6x.png") no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .portfolio-item-g {
+    background: url("../img/our-work-img-7x.png") no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .portfolio-item:hover {
+    transform: scale(1.03);
+    transition: all .1s ease-in-out; }
+    .portfolio-item:hover > .overlay {
+      opacity: 1;
+      background: linear-gradient(#fce38a, #f38181);
+      background: #fce38a;
+      /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient(#fce38a, #f38181);
+      /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(#fce38a, #f38181);
+      /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(#fce38a, #f38181);
+      /* For Firefox 3.6 to 15 */
+      background: linear-gradient(#fce38a, #f38181);
+      /* Standard syntax */
+      opacity: .9; }
+    .portfolio-item:hover > .desc-container {
+      visibility: visible; }
 
-.portfolio-item-b {
-  background: url("../img/our-work-img-2x.png") no-repeat;
-  background-size: cover;
-  background-position: center; }
+.desc-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  visibility: hidden; }
 
-.portfolio-item-c {
-  background: url("../img/our-work-img-3x.png") no-repeat;
-  background-size: cover;
-  background-position: center;
-  grid-column-start: 3;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: span 2; }
+.item-description {
+  z-index: 2;
+  color: #ffffff;
+  font-family: Montserrat-Regular;
+  text-transform: uppercase;
+  margin-top: 1rem; }
 
-.portfolio-item-d {
-  background: url("../img/our-work-img-4x.png") no-repeat;
-  background-size: cover;
-  background-position: center; }
-
-.portfolio-item-e {
-  background: url("../img/our-work-img-5x.png") no-repeat;
-  background-size: cover;
-  background-position: center; }
-
-.portfolio-item-f {
-  background: url("../img/our-work-img-6x.png") no-repeat;
-  background-size: cover;
-  background-position: center; }
-
-.portfolio-item-g {
-  background: url("../img/our-work-img-7x.png") no-repeat;
-  background-size: cover;
-  background-position: center; }
-
-.portfolio-item:hover {
-  transform: scale(1.03);
-  transition: all .1s ease-in-out; }
+.item-subdescription {
+  z-index: 2;
+  color: #ffffff;
+  font-family: Roboto-LightItalic;
+  margin-top: 1rem; }
+  .item-subdescription:first-letter {
+    text-transform: capitalize; }
 
 .testimonials {
   width: 100%;
@@ -493,7 +552,7 @@ a[id="contact"]:target {
   position: relative; }
   .testimonials::after {
     content: '';
-    background-image: url("../img/testimonial-bg-img.png");
+    background-image: url("../img/mini/testimonial-bg-img.png");
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -658,7 +717,7 @@ a[id="contact"]:target {
       background-color: #f38181; }
   .map__bg {
     content: '';
-    background: url("../img/map-bg-img.png") center center no-repeat;
+    background: url("../img/mini/map-bg-img.png") center center no-repeat;
     background-size: cover;
     opacity: .15;
     position: absolute;
@@ -739,12 +798,21 @@ a[id="contact"]:target {
   .subscribe__input {
     height: 40px;
     width: 230px;
-    padding: 1rem;
+    padding-left: 1rem;
     display: block;
     float: left;
     box-sizing: border-box;
     border: 1px solid #e7e7e7; }
     .subscribe__input::-webkit-input-placeholder {
+      font-family: Roboto-LightItalic;
+      color: #cccccc; }
+    .subscribe__input::-moz-placeholder {
+      font-family: Roboto-LightItalic;
+      color: #cccccc; }
+    .subscribe__input:-ms-input-placeholder {
+      font-family: Roboto-LightItalic;
+      color: #cccccc; }
+    .subscribe__input:-moz-placeholder {
       font-family: Roboto-LightItalic;
       color: #cccccc; }
   .subscribe__button {
@@ -876,7 +944,7 @@ a[id="contact"]:target {
   float: left; }
 
 .icon-quote2 {
-  background-image: url("../img/testimonial-img.jpg");
+  background-image: url("../img/mini/testimonial-img.jpg");
   background-size: cover;
   background-position: center center;
   display: block;
@@ -904,6 +972,12 @@ a[id="contact"]:target {
   margin-right: .2rem;
   position: relative;
   top: 3px; }
+
+.icon-picture {
+  background: url("../img/icons/picture-icon.png") center center no-repeat;
+  background-size: contain;
+  width: 28px;
+  height: 28px; }
 
 section, article {
   width: 100%;
