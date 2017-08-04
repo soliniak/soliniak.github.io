@@ -23,17 +23,12 @@ window.onscroll = function () {
 
 };
 
-
 // ############### UNDERLINE ######################
 
 const navItems	= document.querySelectorAll(".nav__item"),
 	  underline = document.querySelector(".underline"),
-	  parentPos = document.querySelector("#header").getBoundingClientRect(),
-	  nav 		= document.querySelector(".nav").getBoundingClientRect(),
-	  anchItems = document.querySelectorAll(".nav__link"),
-	  navPos 	= parentPos.left + nav.left;
+	  anchItems = document.querySelectorAll(".nav__link");
 
-console.log("nav: " + nav.left);
 
 init = function () {
 	for ( let i = 0; i < navItems.length; i++){
@@ -52,11 +47,18 @@ init = function () {
 }
 
 mouseOver = function () {
-	let link = this.getBoundingClientRect();
-	underline.style.left = link.left - nav.left + "px";
-	underline.style.marginLeft = "1rem";
-	underline.style.width = link.right - link.left + "px";
-	console.log(underline.style.left);
+
+	let link = {
+		left: this.offsetLeft,
+		width: this.offsetWidth
+	}
+
+	underline.style.left = link.left + "px";
+	underline.style.width = link.width + "px";
+
+	// let derp =  this.getBoundingClientRect();
+	// let zxc = this.offsetLeft;
+	// console.log("underline: " + underline.style.left + ", link: " + derp.left + ", nav: " + nav.left + ", parent: " + parentPos.right + ", offsetLeft: " + nav.offsetLeft + ", link offsetLeft: " + zxc + ", linkWidth: " + link.width);
 }
 
 mouseOut = function () {
@@ -67,7 +69,6 @@ mouseClick = function () {
 	let removeActive = document.querySelector(".nav__link--active");
 	removeActive.classList.remove("nav__link--active");
 	this.classList.add("nav__link--active");
-	// scroll(this.getAttribute("id"));
 }
 
 anchorClick = function () {
@@ -75,12 +76,14 @@ anchorClick = function () {
 }
 
 active = function () {
-	let active = document.querySelector(".nav__link--active").getBoundingClientRect();
-	underline.style.left =  active.left - nav.left + "px";
-	underline.style.width = active.right - active.left + "px";
-	console.log(underline.style.left);
+	let active = {
+		left: document.querySelector(".nav__link--active").offsetLeft,
+		width: document.querySelector(".nav__link--active").offsetWidth
+	}
+console.log(active.width);
+	underline.style.left =  active.left + "px";
+	underline.style.width = active.width + "px";
 }
-
 
 
 // ###################### SCROLL ########################

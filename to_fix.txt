@@ -1,0 +1,10 @@
+To do:
+- fix underline in menu item - done // getBoundingClientRect changed to offsetLeft //
+- fix start pos of underline
+- underline moves depending on section
+- padding in subscribe
+- lower resolution of pictures
+- make css for scroll for ff and ie
+- sliders
+- overlay for pictures hover
+- mobile version

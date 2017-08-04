@@ -50,15 +50,12 @@ a[id="contact"]:target {
     margin-top: .8rem; }
   .header__navbar {
     position: relative;
-    display: block; }
-    .header__navbar li, .header__navbar form.nav__form {
+    display: inherit; }
+    .header__navbar li, .header__navbar form.nav__formn {
       display: inline;
       text-transform: uppercase;
       font-size: .8rem;
       margin: 0 1rem; }
-    .header__navbar li:first-child {
-      padding-left: 0;
-      margin-left: 0; }
 
 .nav {
   position: relative; }
@@ -74,7 +71,6 @@ a[id="contact"]:target {
   height: 3px;
   background-color: #fce38a;
   display: inline-block;
-  margin-left: .5rem;
   transition: all .2s linear; }
 
 .logo {
