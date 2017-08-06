@@ -6,11 +6,12 @@
 
 // console.log('Element is ' + offset + ' vertical pixels from <body>');
 
-const el = document.querySelector('header');
+const 	el 		= document.querySelector('header');
 
 
 window.onscroll = function () { 
 	let bodyScrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
     if (bodyScrollTop >= 200 ) {
         el.classList.remove("nav-transparent");
         el.classList.add("nav-colored");
@@ -21,6 +22,24 @@ window.onscroll = function () {
     }
 
 
+let anchors = document.querySelectorAll(".anchor");
+
+	for (let i = anchors.length - 1; i >= 0; i--){
+  		let anchor = anchors[i].className.split(" ")[0];
+  		let compare = document.querySelector("."+anchor);
+  		let compareId = document.querySelector("#"+anchor);
+  		if (bodyScrollTop >= compare.offsetTop) {
+  			console.log( i + " " + anchor + " add class active");
+
+  			let active = document.querySelector(".nav__link--active");
+  			active.classList.remove(".nav__link--active");
+
+  			console.log(compareId);
+
+  			return;
+  		}
+
+	}
 };
 
 // ############### UNDERLINE ######################
