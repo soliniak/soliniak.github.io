@@ -742,12 +742,12 @@ a[id="contact"]:target {
     justify-content: space-between;
     box-sizing: border-box; }
     .footer__item-left {
-      width: 500px;
+      width: 42%;
       padding-right: 2rem; }
     .footer__item-center {
-      width: 400px; }
+      width: 33%; }
     .footer__item-right {
-      width: 276px; }
+      width: 25%; }
 
 .subscription-text {
   font-family: Roboto-Regular;
@@ -867,7 +867,10 @@ a[id="contact"]:target {
 .arrow {
   background: url("../img/arrow.png") center center no-repeat;
   display: block;
-  border: none; }
+  border: none;
+  transition: transform .5s linear; }
+  .arrow:focus {
+    outline: none; }
   .arrow-left, .arrow-right {
     height: 50px;
     width: 50px; }
@@ -881,6 +884,8 @@ a[id="contact"]:target {
     right: 0;
     height: 100%;
     width: 50px; }
+  .arrow-rotate {
+    transform: scale(0.7) rotate(180deg); }
 
 .more-photos {
   font-family: Roboto-LightItalic;

@@ -2,6 +2,7 @@ const gulp = require('gulp'),
 	sass = require('gulp-sass'),
     browserSync = require('browser-sync'),
     autoprefixer = require('gulp-autoprefixer');
+    
 // Static server
 gulp.task('browserSync', function() {
     browserSync.init({
@@ -17,16 +18,8 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('./css/'))
 });
 
-//Watch task
-gulp.task('watch', ['browserSync', 'styles'], function() {
-    gulp.watch('sass/**/*.sass',['styles']);
-	gulp.watch('sass/**/*.sass', browserSync.reload);
-    gulp.watch('*.html', browserSync.reload);
-    gulp.watch('*.js', browserSync.reload);
-});
 
- 
-gulp.task('default', () =>
+gulp.task('prefix', () =>
     gulp.src('css/style.css')
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
@@ -34,3 +27,13 @@ gulp.task('default', () =>
         }))
         .pipe(gulp.dest('dist'))
 );
+
+//Watch task
+gulp.task('watch', ['browserSync', 'styles', 'prefix'], function() {
+    gulp.watch('sass/**/*.sass',['styles']);
+	gulp.watch('sass/**/*.sass', browserSync.reload);
+    gulp.watch('*.html', browserSync.reload);
+    gulp.watch('*.js', browserSync.reload);
+});
+
+ 

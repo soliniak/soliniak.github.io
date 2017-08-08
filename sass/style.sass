@@ -741,11 +741,13 @@ $getBig: "../img/"
 			width: 18px
 			background: url('../img/icons/pin-icon.png') center center no-repeat
 			background-size: contain
+
 		&::after
 			content: ''
 			height: .2rem
 			width: 50%
 			background-color: $sunset
+
 	&__bg
 		content: ''
 
@@ -757,7 +759,6 @@ $getBig: "../img/"
 		right: 0
 		bottom: 0
 		left: 0
-
 
 .footer
 	background-color: #f8f8f8
@@ -775,12 +776,12 @@ $getBig: "../img/"
 		justify-content: space-between
 		box-sizing: border-box
 		&-left
-			width: 500px
+			width: 42%
 			padding-right: 2rem
 		&-center
-			width: 400px
+			width: 33%
 		&-right
-			width: 276px
+			width: 25%
 .subscription
 	&-text
 		font-family: $roboto_regular
@@ -896,6 +897,10 @@ $getBig: "../img/"
 	background: url('#{$getBig}arrow.png') center center no-repeat
 	display: block
 	border: none
+	transition: transform .5s linear
+
+	&:focus
+		outline: none
 
 	&-left, &-right
 		height: 50px
@@ -912,6 +917,9 @@ $getBig: "../img/"
 			right: 0
 			height: 100%
 			width: 50px
+	&-rotate
+		transform: scale(.7) rotate(180deg)
+
 .more-photos
 	font-family: $roboto_lightitalic
 	font-size: .8rem

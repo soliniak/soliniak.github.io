@@ -1,10 +1,11 @@
 To do:
 - fix underline in menu item - done // getBoundingClientRect changed to offsetLeft //
 - fix width of underline at start / width 40 should be 46 / - done //  js was loading before css. Adding window.onload into DOMContentLoaded fixed the problem //
-- underline moves depending on section
+- underline moves depending on section - done // using offsetHeight, value of the end of the page is provided, that allows to trigger contact underline //
 - padding in subscribe - done // added prefixes to handle all browsers //
 - lower resolution of pictures
 - make css for scroll for ff and ie
 - sliders
 - overlay for pictures hover - done
 - mobile version
+- add autoprefixer - done
