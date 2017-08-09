@@ -217,6 +217,61 @@ let btn = document.querySelectorAll(".arrow--service"),
 
 }
 
+// ########################### sliderOne ###############################
+
+sliderOne = function () {
+
+	const 	slides = document.querySelectorAll(".sliderOne"),
+			btnLeft = document.querySelector(".arrow-left"),
+			btnRight = document.querySelector(".arrow-right");
+
+	let click = 0;
+
+	for (let i = 0; i < slides.length; i++) {
+		console.log(slides[i]);
+		this.slide = slides[i];
+		this.slide.style.left = i * 100 + "%";
+	}
+
+
+	btnLeft.addEventListener("click", function () {
+
+		if (click >= slides.length - 1) {
+
+			return;
+
+		} else {
+
+			for (let i = 0; i < slides.length; i++) {
+
+			let leftVal = parseInt(slides[i].style.left, 10);
+			slides[i].style.left = leftVal - 100 + "%";
+
+			}	
+		}
+
+		click++;
+	});
+
+	btnRight.addEventListener("click", function () {
+
+		if (click <= 0) {
+			click = 0;
+			return;
+
+		} else {
+
+			for (let i = 0; i < slides.length; i++) {
+
+			let leftVal = parseInt(slides[i].style.left, 10);
+			slides[i].style.left = leftVal + 100 + "%";
+
+			}	
+		}
+
+			click--;
+	});
+}
 // ############### Start => DOMContentLoaded - make sure to load JS after DOM. onload - make sure to load JS after CSS ######################
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -225,7 +280,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	  init();
 	  active();
-
+	  sliderOne();
   	}
 
 });

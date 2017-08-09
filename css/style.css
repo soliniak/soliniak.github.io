@@ -379,11 +379,21 @@ a[id="contact"]:target {
     align-items: center;
     justify-content: center; }
   .quote__items {
-    padding: 0 2rem; }
+    padding: 0 2rem;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative; }
   .quote__item {
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
-    align-content: center; }
+    align-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 1s linear; }
   .quote__text {
     font-family: Roboto-LightItalic;
     font-size: 1.3rem;
@@ -579,7 +589,7 @@ a[id="contact"]:target {
       font-family: Montserrat-Regular;
       text-transform: uppercase; }
       .testimonials__person .person-img {
-        height: 100%;
+        height: 200px;
         width: 100px;
         margin-right: 2rem;
         float: left; }
@@ -616,7 +626,7 @@ a[id="contact"]:target {
           height: 100px;
           width: 100px; }
       .testimonials__person .person-fig {
-        max-width: 800px;
+        max-width: 100%;
         padding-top: 1rem; }
       .testimonials__person .person-info {
         display: block;
@@ -869,8 +879,6 @@ a[id="contact"]:target {
   display: block;
   border: none;
   transition: transform .5s linear; }
-  .arrow:focus {
-    outline: none; }
   .arrow-left, .arrow-right {
     height: 50px;
     width: 50px; }
@@ -884,6 +892,8 @@ a[id="contact"]:target {
     right: 0;
     height: 100%;
     width: 50px; }
+    .arrow--service-bottom:focus {
+      outline: none; }
   .arrow-rotate {
     transform: scale(0.7) rotate(180deg); }
 

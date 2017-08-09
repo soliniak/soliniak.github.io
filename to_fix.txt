@@ -5,7 +5,9 @@ To do:
 - padding in subscribe - done // added prefixes to handle all browsers //
 - lower resolution of pictures
 - make css for scroll for ff and ie
-- sliders
+- sliders - in progress... thinking about how to create one function to all sliders... need some sleep...
 - overlay for pictures hover - done
 - mobile version
 - add autoprefixer - done
+- W3C Validation - done
+- in section "story about us" add counter for digits
