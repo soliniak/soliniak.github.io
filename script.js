@@ -1,3 +1,5 @@
+"use strict";
+
 const 	el = document.querySelector('header'),
 		bodyHeight = window.offsetHeight || document.documentElement.scrollHeight || document.body.scrollHeight,
 		vH = document.documentElement.clientHeight || window.innerHeight;
@@ -62,7 +64,7 @@ const navItems	= document.querySelectorAll(".nav__item"),
 	  underline = document.querySelector(".underline"),
 	  anchItems = document.querySelectorAll(".nav__link");
 
-init = function () {
+function init () {
 
 	for ( let i = 0; i < navItems.length; i++){
 
@@ -90,7 +92,7 @@ init = function () {
 
 // ############### UNDERLINE ######################
 
-mouseOver = function () {
+function mouseOver () {
 
 	let link = {
 
@@ -104,11 +106,11 @@ mouseOver = function () {
 
 }
 
-mouseOut = function () {
+function mouseOut () {
 	active();
 }
 
-mouseClick = function () {
+function mouseClick () {
 
 	let removeActive = document.querySelector(".nav__link--active");
 
@@ -117,13 +119,13 @@ mouseClick = function () {
 
 }
 
-anchorClick = function () {
+function anchorClick () {
 
 	scroll(this.getAttribute("href"));
 
 }
 
-active = function () {
+function active () {
 
 	let active = {
 
@@ -140,7 +142,7 @@ active = function () {
 
 // ###################### SMOOTH SCROLL ########################
 
-getAnchor = function (aID) {
+function getAnchor (aID) {
 
 	let anchor = document.querySelector(aID),
 		aPos = anchor.offsetTop - 50;
@@ -149,11 +151,11 @@ getAnchor = function (aID) {
 
 }
 
-scroll = function (aID) {
+function scroll (aID) {
 
 	let startY = self.pageYOffset,
    		stopY = getAnchor(aID),
-    	distance = stopY > startY ? stopY - startY : startY - stopY;
+    	distance = stopY > startY ? stopY - startY - 200 : startY - stopY + 200;
 
     if (distance < 100) {
 
@@ -193,85 +195,109 @@ scroll = function (aID) {
 
 // ########################### SERVICE DROPDOWN ###############################
 
-let btn = document.querySelectorAll(".arrow--service"),
-	btnArrow = document.querySelectorAll(".arrow--service");
+function dropdown() {
+	const 	btn = document.querySelectorAll(".arrow--service");
 
-	for ( let i = 0; i < btn.length; i++ ) {
+		for ( let i = 0; i < btn.length; i++ ) {
 
-		btn[i].addEventListener("click", function () {
+			btn[i].addEventListener("click", function () {
 
-			let infoCaptionAll = document.querySelectorAll(".info__caption");
+				let infoCaptionAll = document.querySelectorAll(".info__caption");
 
-			for ( let i = 0; i < infoCaptionAll.length; i++){
+				for ( let i = 0; i < infoCaptionAll.length; i++){
 
-				infoCaptionAll[i].classList.remove("info__caption-open");
-				btnArrow[i].classList.remove("arrow-rotate");
+					infoCaptionAll[i].classList.remove("info__caption-open");
+					btn[i].classList.remove("arrow-rotate");
 
-			}
+				}
 
-			infoCaptionAll[i].classList.add("info__caption-open");
-			btnArrow[i].classList.add("arrow-rotate");
-			return;
+				infoCaptionAll[i].classList.add("info__caption-open");
+				btn[i].classList.add("arrow-rotate");
+				return;
 
+			});
+
+	}
+}
+// ########################### Slider ###############################
+
+function slider () {
+
+	const 	slider = document.querySelectorAll("div[data-type='slider']");
+
+	for (let i = 0; i < slider.length; i++) {
+
+		const 	slides 	= slider[i].querySelectorAll(".slide"),
+				goLeft 	= slider[i].querySelector(".arrow-right"),
+				goRight = slider[i].querySelector(".arrow-left");
+		
+		let click = 0;
+
+		for (let i = 0; i < slides.length; i++) {
+			let slide = slides[i];
+				slide.style.left = i * 100 + "%";
+		}
+
+		goLeft.addEventListener("click", function () {
+
+			if (click >= slides.length - 1) {
+
+					return;
+
+				} else {
+
+					for (let i = 0; i < slides.length; i++) {
+
+						let leftVal = parseInt(slides[i].style.left, 10);
+						slides[i].style.left = leftVal - 100 + "%";
+
+					}	
+				}
+
+			click++;
 		});
 
-}
+		goRight.addEventListener("click", function () {
 
-// ########################### sliderOne ###############################
+			if (click <= 0) {
+				click = 0;
+				return;
 
-sliderOne = function () {
+			} else {
 
-	const 	slides = document.querySelectorAll(".sliderOne"),
-			btnLeft = document.querySelector(".arrow-left"),
-			btnRight = document.querySelector(".arrow-right");
+				for (let i = 0; i < slides.length; i++) {
 
-	let click = 0;
+					let leftVal = parseInt(slides[i].style.left, 10);
+					slides[i].style.left = leftVal + 100 + "%";
 
-	for (let i = 0; i < slides.length; i++) {
-		console.log(slides[i]);
-		this.slide = slides[i];
-		this.slide.style.left = i * 100 + "%";
-	}
-
-
-	btnLeft.addEventListener("click", function () {
-
-		if (click >= slides.length - 1) {
-
-			return;
-
-		} else {
-
-			for (let i = 0; i < slides.length; i++) {
-
-			let leftVal = parseInt(slides[i].style.left, 10);
-			slides[i].style.left = leftVal - 100 + "%";
-
-			}	
-		}
-
-		click++;
-	});
-
-	btnRight.addEventListener("click", function () {
-
-		if (click <= 0) {
-			click = 0;
-			return;
-
-		} else {
-
-			for (let i = 0; i < slides.length; i++) {
-
-			let leftVal = parseInt(slides[i].style.left, 10);
-			slides[i].style.left = leftVal + 100 + "%";
-
-			}	
-		}
+				}	
+			}
 
 			click--;
-	});
+		});
+	}
 }
+
+// ########################### counting up digits #########################
+
+function countingUp() {
+
+	const 	facts = document.querySelectorAll(".facts__item");
+// console.log(facts);
+	const DIGITS = Object.freeze({
+		WEBDESIGN: '654',
+		HAPPYCLIENT: '951',
+		AWARDWINNER: '357',
+		CUPOFCOFFE: '258',
+		MEMBERS: '456'
+	});
+
+	for ( let i = 0; i < facts.length; i++ ){
+		let fact = facts[i].querySelector("p.number");
+		fact.innerHTML = Object.values(DIGITS)[i];
+	}
+}
+
 // ############### Start => DOMContentLoaded - make sure to load JS after DOM. onload - make sure to load JS after CSS ######################
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -280,7 +306,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	  init();
 	  active();
-	  sliderOne();
+	  slider();
+	  dropdown();
+	  countingUp();
   	}
 
 });

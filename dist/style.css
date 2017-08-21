@@ -447,8 +447,14 @@ a[id="contact"]:target {
     -ms-flex-pack: center;
     justify-content: center; }
   .quote__items {
-    padding: 0 2rem; }
+    padding: 0 2rem;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative; }
   .quote__item {
+    width: 100%;
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -456,7 +462,12 @@ a[id="contact"]:target {
     -ms-flex-align: center;
     align-items: center;
     -ms-flex-line-pack: center;
-    align-content: center; }
+    align-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 1s linear;
+    transition: all 1s linear; }
   .quote__text {
     font-family: Roboto-LightItalic;
     font-size: 1.3rem;
@@ -685,44 +696,30 @@ a[id="contact"]:target {
       font-family: Montserrat-Regular;
       text-transform: uppercase; }
       .testimonials__person .person-img {
-        height: 100%;
+        height: 200px;
         width: 100px;
         margin-right: 2rem;
         float: left; }
         .testimonials__person .person-img .person-1 {
-          background-image: url("../img/person-1.jpg");
-          background-size: 230px;
-          background-repeat: no-repeat;
-          background-position: center top;
-          border-radius: 50%;
-          height: 100px;
-          width: 100px; }
+          height: 150px;
+          width: 220px;
+          top: 0;
+          left: -60px; }
         .testimonials__person .person-img .person-2 {
-          background-image: url("../img/person-2.jpg");
-          background-size: 200px;
-          background-repeat: no-repeat;
-          background-position: 55% center;
-          border-radius: 50%;
-          height: 100px;
-          width: 100px; }
+          height: 290px;
+          width: 200px;
+          top: -90px;
+          left: -57px; }
         .testimonials__person .person-img .person-3 {
-          background-image: url("../img/person-3.jpg");
-          background-size: 230px;
-          background-repeat: no-repeat;
-          background-position: center top;
-          border-radius: 50%;
-          height: 100px;
-          width: 100px; }
+          height: 150px;
+          width: 240px;
+          top: -10px;
+          left: -70px; }
         .testimonials__person .person-img .person-4 {
-          background-image: url("../img/person-4.jpg");
-          background-size: 230px;
-          background-repeat: no-repeat;
-          background-position: center 30%;
-          border-radius: 50%;
-          height: 100px;
-          width: 100px; }
+          height: 170px;
+          width: 200px; }
       .testimonials__person .person-fig {
-        max-width: 800px;
+        max-width: 100%;
         padding-top: 1rem; }
       .testimonials__person .person-info {
         display: block;
@@ -742,6 +739,16 @@ a[id="contact"]:target {
         display: inline-block;
         background-color: #f38181;
         margin-bottom: 1rem; }
+
+.img-mask {
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  border-radius: 50%; }
+  .img-mask > img {
+    position: relative;
+    top: -20px;
+    left: -50px; }
 
 .blog__item {
   display: block;
@@ -815,7 +822,11 @@ a[id="contact"]:target {
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
   .map-text {
     font-family: Montserrat-Bold;
     text-transform: uppercase;
@@ -831,18 +842,18 @@ a[id="contact"]:target {
     -ms-flex-direction: column;
     flex-direction: column;
     color: #f38181;
-    line-height: 2em; }
-    .map-text::before {
-      content: '';
-      height: 22px;
-      width: 18px;
-      background: url("../img/icons/pin-icon.png") center center no-repeat;
-      background-size: contain; }
+    line-height: 2em;
+    position: absolute; }
     .map-text::after {
       content: '';
       height: .2rem;
       width: 50%;
       background-color: #f38181; }
+  .map-marker {
+    height: 22px;
+    width: 18px;
+    position: relative;
+    top: -40px; }
   .map__bg {
     content: '';
     background: url("../img/mini/map-bg-img.png") center center no-repeat;
@@ -853,6 +864,34 @@ a[id="contact"]:target {
     right: 0;
     bottom: 0;
     left: 0; }
+
+.map:hover .map-marker {
+  -webkit-animation-name: bouncemarker;
+  animation-name: bouncemarker;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+@-webkit-keyframes bouncemarker {
+  0% {
+    top: -40px; }
+  50% {
+    top: -30px;
+    height: 19px;
+    width: 22px; }
+  100% {
+    top: -40px; } }
+
+@keyframes bouncemarker {
+  0% {
+    top: -40px; }
+  50% {
+    top: -30px;
+    height: 19px;
+    width: 22px; }
+  100% {
+    top: -40px; } }
 
 .footer {
   background-color: #f8f8f8;
@@ -1020,8 +1059,6 @@ a[id="contact"]:target {
   transition: -webkit-transform .5s linear;
   transition: transform .5s linear;
   transition: transform .5s linear, -webkit-transform .5s linear; }
-  .arrow:focus {
-    outline: none; }
   .arrow-left, .arrow-right {
     height: 50px;
     width: 50px; }
@@ -1038,6 +1075,8 @@ a[id="contact"]:target {
     right: 0;
     height: 100%;
     width: 50px; }
+    .arrow--service-bottom:focus {
+      outline: none; }
   .arrow-rotate {
     -webkit-transform: scale(0.7) rotate(180deg);
     transform: scale(0.7) rotate(180deg); }

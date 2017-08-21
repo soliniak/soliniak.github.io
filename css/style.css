@@ -594,37 +594,23 @@ a[id="contact"]:target {
         margin-right: 2rem;
         float: left; }
         .testimonials__person .person-img .person-1 {
-          background-image: url("../img/person-1.jpg");
-          background-size: 230px;
-          background-repeat: no-repeat;
-          background-position: center top;
-          border-radius: 50%;
-          height: 100px;
-          width: 100px; }
+          height: 150px;
+          width: 220px;
+          top: 0;
+          left: -60px; }
         .testimonials__person .person-img .person-2 {
-          background-image: url("../img/person-2.jpg");
-          background-size: 200px;
-          background-repeat: no-repeat;
-          background-position: 55% center;
-          border-radius: 50%;
-          height: 100px;
-          width: 100px; }
+          height: 290px;
+          width: 200px;
+          top: -90px;
+          left: -57px; }
         .testimonials__person .person-img .person-3 {
-          background-image: url("../img/person-3.jpg");
-          background-size: 230px;
-          background-repeat: no-repeat;
-          background-position: center top;
-          border-radius: 50%;
-          height: 100px;
-          width: 100px; }
+          height: 150px;
+          width: 240px;
+          top: -10px;
+          left: -70px; }
         .testimonials__person .person-img .person-4 {
-          background-image: url("../img/person-4.jpg");
-          background-size: 230px;
-          background-repeat: no-repeat;
-          background-position: center 30%;
-          border-radius: 50%;
-          height: 100px;
-          width: 100px; }
+          height: 170px;
+          width: 200px; }
       .testimonials__person .person-fig {
         max-width: 100%;
         padding-top: 1rem; }
@@ -646,6 +632,16 @@ a[id="contact"]:target {
         display: inline-block;
         background-color: #f38181;
         margin-bottom: 1rem; }
+
+.img-mask {
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  border-radius: 50%; }
+  .img-mask > img {
+    position: relative;
+    top: -20px;
+    left: -50px; }
 
 .blog__item {
   display: block;
@@ -704,7 +700,8 @@ a[id="contact"]:target {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  flex-direction: column; }
   .map-text {
     font-family: Montserrat-Bold;
     text-transform: uppercase;
@@ -713,18 +710,18 @@ a[id="contact"]:target {
     align-items: center;
     flex-direction: column;
     color: #f38181;
-    line-height: 2em; }
-    .map-text::before {
-      content: '';
-      height: 22px;
-      width: 18px;
-      background: url("../img/icons/pin-icon.png") center center no-repeat;
-      background-size: contain; }
+    line-height: 2em;
+    position: absolute; }
     .map-text::after {
       content: '';
       height: .2rem;
       width: 50%;
       background-color: #f38181; }
+  .map-marker {
+    height: 22px;
+    width: 18px;
+    position: relative;
+    top: -40px; }
   .map__bg {
     content: '';
     background: url("../img/mini/map-bg-img.png") center center no-repeat;
@@ -735,6 +732,21 @@ a[id="contact"]:target {
     right: 0;
     bottom: 0;
     left: 0; }
+
+.map:hover .map-marker {
+  animation-name: bouncemarker;
+  animation-duration: 1s;
+  animation-iteration-count: infinite; }
+
+@keyframes bouncemarker {
+  0% {
+    top: -40px; }
+  50% {
+    top: -30px;
+    height: 19px;
+    width: 22px; }
+  100% {
+    top: -40px; } }
 
 .footer {
   background-color: #f8f8f8;

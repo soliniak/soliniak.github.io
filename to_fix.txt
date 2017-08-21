@@ -1,13 +1,16 @@
 To do:
-- fix underline in menu item - done // getBoundingClientRect changed to offsetLeft //
+- fix underline in menu item - done // getBoundingClientRect changed to offsetLeft (probably unnecessary - error was because of style/js loading order) //
 - fix width of underline at start / width 40 should be 46 / - done //  js was loading before css. Adding window.onload into DOMContentLoaded fixed the problem //
 - underline moves depending on section - done // using offsetHeight, value of the end of the page is provided, that allows to trigger contact underline //
 - padding in subscribe - done // added prefixes to handle all browsers //
 - lower resolution of pictures
 - make css for scroll for ff and ie
-- sliders - in progress... thinking about how to create one function to all sliders... need some sleep...
+- sliders - done // one function supports all sliders ;) //
 - overlay for pictures hover - done
 - mobile version
 - add autoprefixer - done
 - W3C Validation - done
-- in section "story about us" add counter for digits
+- in section "story about us" add counter for digits - working on it...
+- add alt's to img - done
+- note for future projects - use more img instead of background-image of div's
+- added "use strict" to script.js
