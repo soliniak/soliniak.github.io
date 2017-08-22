@@ -2,7 +2,9 @@
 
 const 	el = document.querySelector('header'),
 		bodyHeight = window.offsetHeight || document.documentElement.scrollHeight || document.body.scrollHeight,
-		vH = document.documentElement.clientHeight || window.innerHeight;
+		vH = document.documentElement.clientHeight || window.innerHeight,
+		counter = document.querySelector(".facts").getBoundingClientRect();
+		let start = false;
 
 // ############### adding background to nav at onscroll ######################
 
@@ -16,12 +18,16 @@ window.onscroll = function () {
         el.classList.remove("nav-transparent");
         el.classList.add("nav-colored");
 
-    } 
-    else {
+    } else {
 
         el.classList.add("nav-transparent");
         el.classList.remove("nav-colored");
 
+    }
+
+    if( bodyScrollTop + vH > counter.top) {
+    	let go = 0;
+    	countingUp(go);
     }
 
 	// ############### toggling between active sections ######################
@@ -280,24 +286,59 @@ function slider () {
 
 // ########################### counting up digits #########################
 
-function countingUp() {
+function countingUp(go) {
 
-	const 	facts = document.querySelectorAll(".facts__item");
-// console.log(facts);
-	const DIGITS = Object.freeze({
-		WEBDESIGN: '654',
-		HAPPYCLIENT: '951',
-		AWARDWINNER: '357',
-		CUPOFCOFFE: '258',
-		MEMBERS: '456'
-	});
+	if ( start === false && go == 0) {
+		let a = 0,
+			b = 3,
+			c = 7;
 
-	for ( let i = 0; i < facts.length; i++ ){
-		let fact = facts[i].querySelector("p.number");
-		fact.innerHTML = Object.values(DIGITS)[i];
+		const 	facts = document.querySelectorAll(".facts__item"),
+				coffe = document.querySelector(".facts__item--cupofcoffe > p.number"),
+				DIGITS = Object.freeze({
+					WEBDESIGN: '154',
+					HAPPYCLIENT: '251',
+					AWARDWINNER: '157',
+					CUPOFCOFFE: 'infinite',
+					MEMBERS: '56'
+				});
+
+		for ( let i = 0; i < facts.length; i++ ){
+			let fact = facts[i].querySelector("p.number");
+			fact.innerHTML = 0;	
+			setInterval( function () { 
+					if (fact.innerHTML < parseInt(Object.values(DIGITS)[i])) 
+					{
+						fact.innerHTML++;
+					} else if ( DIGITS.CUPOFCOFFE == "infinite") {
+
+							a < 8 ? a++ : a = 0;
+							b < 8 ? b++ : b = 0;
+							c < 8 ? c++ : c = 0;
+							
+							coffe.innerHTML = a + "" + b + "" + c;				
+					};
+			}, 10);
+		}
+		start = true;
+		go++;
 	}
 }
 
+function preloader () {
+	const 	pre = document.querySelector(".preloader"),
+			logoAnimated = document.querySelector(".logo-animated"),
+			body = document.body;
+	setTimeout( function () {
+		pre.style.animationName = "preloaderBg";
+		pre.style.animationDuration = "1.2s";
+		pre.style.animationFillMode = "forwards";
+		body.style.overflowY = "scroll"
+		logoAnimated.style.display = "none";
+	}, 500);		
+	
+}
+				
 // ############### Start => DOMContentLoaded - make sure to load JS after DOM. onload - make sure to load JS after CSS ######################
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -309,6 +350,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	  slider();
 	  dropdown();
 	  countingUp();
+	  preloader();
   	}
 
 });

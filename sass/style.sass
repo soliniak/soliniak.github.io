@@ -243,6 +243,7 @@ $getBig: "../img/"
 		width: 20%
 		border-left: 1px solid #fff
 		text-transform: uppercase
+		text-align: center
 		&:last-child
 			border-right: 1px solid #fff
 		.number
@@ -993,6 +994,7 @@ $getBig: "../img/"
 		border: 2px solid $blueish
 		padding: 3rem
 		margin-right: 2rem
+		margin-left: 2rem
 		display: block
 		float: left
 	&-quote2
@@ -1002,6 +1004,7 @@ $getBig: "../img/"
 		display: block
 		padding: 5rem
 		margin-right: 2rem
+		margin-left: 2rem
 		border-radius: 50%
 	&-view
 		background: url('../img/icons/view-icon.png') center center no-repeat
@@ -1027,6 +1030,59 @@ $getBig: "../img/"
 		background-size: contain
 		width: 28px
 		height: 28px
+
+
+.preloader
+	height: 100vh
+	width: 100vw
+	position: absolute
+	background-color: white
+	z-index: 9999
+	display: flex
+	justify-content: center
+	align-items: center
+
+@keyframes preloaderBg
+	0%
+		height: 100vh
+	100%
+		height: 0
+		display: none
+
+
+.logo-animated
+	font-family: $big_one
+	font-size: 3rem
+	color: $sunset
+.logo-animated span:nth-child(odd)	
+	animation-name: logoOdd
+	animation-duration: 1.4s
+	animation-iteration-count: infinite
+.logo-animated span:nth-child(even)	
+	animation-name: logoEven
+	animation-duration: 1.4s
+	animation-iteration-count: infinite
+
+
+
+@keyframes logoOdd
+	0%
+		font-size: 3rem
+	50%
+		font-size: 4rem
+	100%
+		font-size: 3rem
+
+@keyframes logoEven
+	0%
+		font-size: 4rem
+	50%
+		font-size: 3rem
+	100%
+		font-size: 4rem		
+
+body
+	overflow: hidden
 
 section, article
 	width: 100%

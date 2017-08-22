@@ -6,11 +6,12 @@ To do:
 - lower resolution of pictures
 - make css for scroll for ff and ie
 - sliders - done // one function supports all sliders ;) //
-- overlay for pictures hover - done
+- overlay for pictures hover - done //
 - mobile version
-- add autoprefixer - done
-- W3C Validation - done
-- in section "story about us" add counter for digits - working on it...
-- add alt's to img - done
-- note for future projects - use more img instead of background-image of div's
-- added "use strict" to script.js
+- add autoprefixer - done //
+- W3C Validation - done //
+- in section "story about us" add counter for digits - done // starts when top of the section appears on screen //
+- add alt's to img - done //
+- note for future projects - use more img instead of background-image of div's ## //
+- added "use strict" to script.js //
+- added simple preloader //

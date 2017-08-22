@@ -277,7 +277,8 @@ a[id="contact"]:target {
     height: 270px;
     width: 20%;
     border-left: 1px solid #fff;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-align: center; }
     .facts__item:last-child {
       border-right: 1px solid #fff; }
     .facts__item .number {
@@ -1139,6 +1140,7 @@ a[id="contact"]:target {
   border: 2px solid #95e1d3;
   padding: 3rem;
   margin-right: 2rem;
+  margin-left: 2rem;
   display: block;
   float: left; }
 
@@ -1149,6 +1151,7 @@ a[id="contact"]:target {
   display: block;
   padding: 5rem;
   margin-right: 2rem;
+  margin-left: 2rem;
   border-radius: 50%; }
 
 .icon-view {
@@ -1177,6 +1180,92 @@ a[id="contact"]:target {
   background-size: contain;
   width: 28px;
   height: 28px; }
+
+.preloader {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-color: white;
+  z-index: 9999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+@-webkit-keyframes preloaderBg {
+  0% {
+    height: 100vh; }
+  100% {
+    height: 0;
+    display: none; } }
+
+@keyframes preloaderBg {
+  0% {
+    height: 100vh; }
+  100% {
+    height: 0;
+    display: none; } }
+
+.logo-animated {
+  font-family: Montserrat-Bold;
+  font-size: 3rem;
+  color: #f38181; }
+
+.logo-animated span:nth-child(odd) {
+  -webkit-animation-name: logoOdd;
+  animation-name: logoOdd;
+  -webkit-animation-duration: 1.4s;
+  animation-duration: 1.4s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+.logo-animated span:nth-child(even) {
+  -webkit-animation-name: logoEven;
+  animation-name: logoEven;
+  -webkit-animation-duration: 1.4s;
+  animation-duration: 1.4s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+@-webkit-keyframes logoOdd {
+  0% {
+    font-size: 3rem; }
+  50% {
+    font-size: 4rem; }
+  100% {
+    font-size: 3rem; } }
+
+@keyframes logoOdd {
+  0% {
+    font-size: 3rem; }
+  50% {
+    font-size: 4rem; }
+  100% {
+    font-size: 3rem; } }
+
+@-webkit-keyframes logoEven {
+  0% {
+    font-size: 4rem; }
+  50% {
+    font-size: 3rem; }
+  100% {
+    font-size: 4rem; } }
+
+@keyframes logoEven {
+  0% {
+    font-size: 4rem; }
+  50% {
+    font-size: 3rem; }
+  100% {
+    font-size: 4rem; } }
+
+body {
+  overflow: hidden; }
 
 section, article {
   width: 100%;
