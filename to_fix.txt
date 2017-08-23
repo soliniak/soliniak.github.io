@@ -7,7 +7,7 @@ To do:
 - make css for scroll for ff and ie
 - sliders - done // one function supports all sliders ;) //
 - overlay for pictures hover - done //
-- mobile version
+- mobile version - in progress...
 - add autoprefixer - done //
 - W3C Validation - done //
 - in section "story about us" add counter for digits - done // starts when top of the section appears on screen //

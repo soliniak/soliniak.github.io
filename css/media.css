@@ -1,0 +1,66 @@
+@media (max-width: 1200px) {
+  .nav-colored {
+    background-color: red; }
+  .about__item, .who__item {
+    box-sizing: border-box;
+    margin: 1rem; }
+  .testimonials__items {
+    box-sizing: border-box;
+    padding-left: 2rem; }
+  .service_two--info {
+    padding-left: 2rem; }
+  .blog__item-date {
+    top: -1rem; } }
+
+@media (max-width: 1144px) {
+  .footer__item-left {
+    display: block;
+    width: 50%; }
+  .footer__item-center {
+    display: flex;
+    width: 50%;
+    padding-bottom: 2rem; }
+    .footer__item-center::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      height: 1px;
+      width: 100%;
+      background-color: #e5e5e5; }
+  .footer__item-right {
+    display: block;
+    width: 100%;
+    margin-top: 2rem;
+    min-height: 100px; }
+    .footer__item-right > .item-title {
+      padding-bottom: 1rem;
+      text-align: center; }
+  .instagram-photos {
+    display: flex;
+    justify-content: space-between; }
+  .more-photos {
+    text-align: right;
+    position: relative;
+    top: 1rem; }
+  .followers::after {
+    position: absolute;
+    bottom: 0; }
+  .blog {
+    margin-right: 0; }
+  .portfolio__items {
+    padding-bottom: 0; }
+  section, article {
+    margin-top: 2rem; } }
+
+@media (max-width: 915px) {
+  .services__items {
+    margin-left: 1rem; }
+  .services__item {
+    width: 50%; }
+    .services__item .services--description {
+      font-size: 1rem;
+      color: grey;
+      margin-right: 1rem; }
+    .services__item .services--title {
+      font-size: 1.1rem; } }

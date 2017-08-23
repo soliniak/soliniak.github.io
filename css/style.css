@@ -843,7 +843,6 @@ a[id="contact"]:target {
     width: 150px;
     background-color: #95e1d3;
     border: none;
-    display: block;
     font-family: Montserrat-Bold;
     color: #ffffff;
     text-transform: uppercase; }
@@ -903,6 +902,7 @@ a[id="contact"]:target {
     transform: scale(0.7);
     position: absolute;
     right: 0;
+    top: 0;
     height: 100%;
     width: 50px; }
     .arrow--service-bottom:focus {

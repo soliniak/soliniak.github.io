@@ -202,11 +202,12 @@ function scroll (aID) {
 // ########################### SERVICE DROPDOWN ###############################
 
 function dropdown() {
-	const 	btn = document.querySelectorAll(".arrow--service");
+	const 	btn  = document.querySelectorAll(".arrow--service"),
+			hand = document.querySelectorAll(".service_two--info .info__item");
 
-		for ( let i = 0; i < btn.length; i++ ) {
+		for ( let i = 0; i < hand.length; i++ ) {
 
-			btn[i].addEventListener("click", function () {
+			hand[i].addEventListener("click", function () {
 
 				let infoCaptionAll = document.querySelectorAll(".info__caption");
 
