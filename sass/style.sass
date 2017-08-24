@@ -335,13 +335,14 @@ $getBig: "../img/"
 		padding-top: 3rem
 	&__items
 	&--img
-		width: 570px 
+		width: 50%
 		height: 380px
 		background-image: url('#{$getBig}what-do-we-do-img.png')
 		background-size: cover
 		background-repeat: no-repeat
 	&--info
-		width: 48%
+		width: 50%
+		margin-left: 2rem
 
 
 .info__item
@@ -421,7 +422,6 @@ $getBig: "../img/"
 		color: #cccccc
 		display: block
 		width: 100%
-		max-height: 4.3rem
 		min-height: 4.3rem
 
 
@@ -611,6 +611,7 @@ $getBig: "../img/"
 		float: left
 		box-sizing: border-box
 		display: inline
+		margin-bottom: 3rem
 		.person
 			position: relative
 			margin-bottom: 1rem
@@ -754,6 +755,9 @@ $getBig: "../img/"
 		width: 18px
 		position: relative
 		top: -40px
+		animation-name: bouncemarker
+		animation-duration: 1s
+		animation-iteration-count: infinite
 	&__bg
 		content: ''
 		background: url('#{$getMini}map-bg-img.png') center center no-repeat
@@ -764,11 +768,6 @@ $getBig: "../img/"
 		right: 0
 		bottom: 0
 		left: 0
-
-.map:hover .map-marker
-	animation-name: bouncemarker
-	animation-duration: 1s
-	animation-iteration-count: infinite
 
 @keyframes bouncemarker
 	0%

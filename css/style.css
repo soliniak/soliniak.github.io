@@ -315,14 +315,15 @@ a[id="contact"]:target {
   padding-top: 3rem; }
 
 .service_two--img {
-  width: 570px;
+  width: 50%;
   height: 380px;
   background-image: url("../img/what-do-we-do-img.png");
   background-size: cover;
   background-repeat: no-repeat; }
 
 .service_two--info {
-  width: 48%; }
+  width: 50%;
+  margin-left: 2rem; }
 
 .info__item {
   width: 100%;
@@ -403,7 +404,6 @@ a[id="contact"]:target {
     color: #cccccc;
     display: block;
     width: 100%;
-    max-height: 4.3rem;
     min-height: 4.3rem; }
   .quote--author {
     position: relative;
@@ -583,7 +583,8 @@ a[id="contact"]:target {
     height: 200px;
     float: left;
     box-sizing: border-box;
-    display: inline; }
+    display: inline;
+    margin-bottom: 3rem; }
     .testimonials__person .person {
       position: relative;
       margin-bottom: 1rem;
@@ -722,7 +723,10 @@ a[id="contact"]:target {
     height: 22px;
     width: 18px;
     position: relative;
-    top: -40px; }
+    top: -40px;
+    animation-name: bouncemarker;
+    animation-duration: 1s;
+    animation-iteration-count: infinite; }
   .map__bg {
     content: '';
     background: url("../img/mini/map-bg-img.png") center center no-repeat;
@@ -733,11 +737,6 @@ a[id="contact"]:target {
     right: 0;
     bottom: 0;
     left: 0; }
-
-.map:hover .map-marker {
-  animation-name: bouncemarker;
-  animation-duration: 1s;
-  animation-iteration-count: infinite; }
 
 @keyframes bouncemarker {
   0% {

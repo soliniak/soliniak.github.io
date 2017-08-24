@@ -15,3 +15,5 @@ To do:
 - note for future projects - use more img instead of background-image of div's ## //
 - added "use strict" to script.js //
 - added simple preloader //
+- developers.google.com/speed/docs/insights/
+- add loop into sliders and drag event
