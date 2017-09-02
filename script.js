@@ -3,8 +3,14 @@
 const 	el = document.querySelector('header'),
 		bodyHeight = window.offsetHeight || document.documentElement.scrollHeight || document.body.scrollHeight,
 		vH = document.documentElement.clientHeight || window.innerHeight,
-		counter = document.querySelector(".facts").getBoundingClientRect();
+		vW = document.documentElement.clientWidth || window.innerWidth,
+		counter = document.querySelector(".facts").getBoundingClientRect(),
+		burgerButton = document.querySelector(".burger"),
+		main = document.querySelector("main"),
+		footer = document.querySelector("footer"),
+		menuLink = document.querySelectorAll(".nav__link");
 		let start = false;
+
 
 // ############### adding background to nav at onscroll ######################
 
@@ -98,6 +104,8 @@ function init () {
 
 // ############### UNDERLINE ######################
 
+
+
 function mouseOver () {
 
 	let link = {
@@ -112,24 +120,28 @@ function mouseOver () {
 
 }
 
+
 function mouseOut () {
 	active();
 }
 
+
 function mouseClick () {
 
-	let removeActive = document.querySelector(".nav__link--active");
+	const removeActive = document.querySelector(".nav__link--active");
 
 	removeActive.classList.remove("nav__link--active");
 	this.classList.add("nav__link--active");
 
 }
 
+
 function anchorClick () {
 
 	scroll(this.getAttribute("href"));
 
 }
+
 
 function active () {
 
@@ -326,6 +338,9 @@ function countingUp(go) {
 	}
 }
 
+
+// ########################### preloader #########################
+
 function preloader () {
 	const 	pre = document.querySelector(".preloader"),
 			logoAnimated = document.querySelector(".logo-animated"),
@@ -338,6 +353,31 @@ function preloader () {
 		logoAnimated.style.display = "none";
 	}, 500);		
 	
+}
+
+
+// ########################### burger menu #########################
+
+function burgerMenu () {
+
+	let elArr = [main, footer];
+
+	for (let i = 0; i < menuLink.length; i++){
+		elArr.push(menuLink[i]);
+	}
+
+	const headerNavbar = document.querySelector(".header__navbar");
+
+	burgerButton.addEventListener("click", function () {
+		headerNavbar.classList.toggle("showBurger");
+	});
+
+	elArr.forEach(el => el.addEventListener("click", function () {
+		headerNavbar.classList.remove("showBurger");
+	}
+	));
+
+
 }
 				
 // ############### Start => DOMContentLoaded - make sure to load JS after DOM. onload - make sure to load JS after CSS ######################
@@ -352,6 +392,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	  dropdown();
 	  countingUp();
 	  preloader();
+	  burgerMenu();
   	}
 
 });

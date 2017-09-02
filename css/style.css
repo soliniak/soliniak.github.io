@@ -65,6 +65,9 @@ a[id="contact"]:target {
     padding: 0;
     margin: 0; }
 
+.burger {
+  display: none; }
+
 .underline {
   position: absolute;
   top: 29px;
@@ -74,7 +77,8 @@ a[id="contact"]:target {
   transition: all .2s linear; }
 
 .logo {
-  font-family: Montserrat-Bold; }
+  font-family: Montserrat-Bold;
+  z-index: 1; }
   .logo__nav {
     color: #fff;
     font-size: 1.5rem; }
@@ -474,7 +478,6 @@ a[id="contact"]:target {
 .portfolio__items {
   height: 780px;
   width: 100%;
-  padding-bottom: 5rem;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 50% 50%;

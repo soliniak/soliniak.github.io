@@ -19,3 +19,4 @@ To do:
 - add loop into sliders and drag event
 - convert sliders to be draggable
 - make iphone to drive in while on screen
+- change section "SOME OF OUR WORK" from grid to flex to support layout on IE...

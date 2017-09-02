@@ -3,8 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="theme-color" content="#f38181">
 		<!-- <meta http-equiv="Expires" content="Mon, 11 dec 2018 23:55:00 GMT"> -->
-		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="icon" sizes="192x192" href="./img/icons/icon2.png">
 		<link rel="stylesheet" type="text/css" href="dist/reset.css">
 		<link rel="stylesheet" type="text/css" href="dist/style.css">
 		<link rel="stylesheet" type="text/css" href="css/media.css">
@@ -15,9 +16,10 @@
 		<!-- ##############################   header / menu   ##############################-->
 	<header class="header" id="header">
 		<div class="container header__container">
-			<h1 class="header__logo">
-				<span class="logo"><a href="#home" class="logo__nav">MoGo</a></span>
+			<h1 class="header__logo logo">
+				<a href="#home" class="logo__nav">MoGo</a>
 			</h1>
+			<a href="#menu" class="burger">MENU</a>
 			<nav class="header__navbar">
 				<ul class="nav">
 					<li class="nav__item"><a href="#about" class="nav__link  nav__link--active">about</a></li>
@@ -26,13 +28,16 @@
 					<li class="nav__item"><a href="#blog" class="nav__link">blog</a></li>
 					<li class="nav__item"><a href="#footer" class="nav__link">contact</a></li>
 					<li class="nav__item"><a href="#cart" class="nav__link"><span class="icon-cart"></span></a></li>
-				</ul>
-					<form class="nav__form nav__form--hidden">
+					<li class="nav__item">
+											<form class="nav__form nav__form--hidden">
 						<input type="search" class="input nav__input" placeholder="Search...">
 						<button class="nav__button-search" aria-expanded="false" title="show/hide search input">
 							<span class="icon-search" aria-hidden="true"></span>
 						</button>
 					</form>
+					</li>
+				</ul>
+
 				<span class="underline"></span>
 			</nav>
 		</div>
@@ -452,7 +457,7 @@
 				<p class="separator"></p>
 				<div class="testimonials__items">
 					<div class="testimonials__person">
-						<figure><div class="person-img"><div class="img-mask"><img src="../img/person-1.jpg" class="person-1" alt="MATTHEW DIX - Graphic Design"></div></div>
+						<figure><div class="person-img"><div class="img-mask"><img src="./img/person-1.jpg" class="person-1" alt="MATTHEW DIX - Graphic Design"></div></div>
 							<figcaption class="person-fig">
 								<h2 class="person">Matthew Dix</h2>
 								<p class="person-info">Graphic design</p>
@@ -466,7 +471,7 @@
 						</figure>
 					</div>
 					<div class="testimonials__person">
-						<figure><div class="person-img"><div class="img-mask"><img src="../img/person-2.jpg" class="person-2" alt="JAELYNN CASTILLO - Graphic Design"></div></div>
+						<figure><div class="person-img"><div class="img-mask"><img src="./img/person-2.jpg" class="person-2" alt="JAELYNN CASTILLO - Graphic Design"></div></div>
 							<figcaption class="person-fig">
 								<h2 class="person">Jaelynn Castillo</h2>
 								<p class="person-info">Graphic design</p>
@@ -480,7 +485,7 @@
 						</figure>
 					</div>
 					<div class="testimonials__person">
-						<figure><div class="person-img"><div class="img-mask"><img src="../img/person-3.jpg" class="person-3" alt="NICK KARVOUNIS - Graphic Design"></div></div>
+						<figure><div class="person-img"><div class="img-mask"><img src="./img/person-3.jpg" class="person-3" alt="NICK KARVOUNIS - Graphic Design"></div></div>
 							<figcaption class="person-fig">
 								<h2 class="person">Nick Karvounis</h2>
 								<p class="person-info">Graphic design</p>
@@ -494,7 +499,7 @@
 						</figure>
 					</div>
 					<div class="testimonials__person">
-						<figure><div class="person-img"><div class="img-mask"><img src="../img/person-4.jpg" class="person-4" alt="Mike Pettrucci - Graphic Design"></div></div>
+						<figure><div class="person-img"><div class="img-mask"><img src="./img/person-4.jpg" class="person-4" alt="Mike Pettrucci - Graphic Design"></div></div>
 							<figcaption class="person-fig">
 								<h2 class="person">Mike Petrucci</h2>
 								<p class="person-info">Graphic design</p>
@@ -518,7 +523,7 @@
 				<p class="separator"></p>
 				<div class="blog__items">
 					<div class="blog__item">
-						<img src="img/blog-img-1.png" alt="Lady behind desc">
+						<img src="./img/blog-img-1.png" alt="Lady behind desc">
 						<div class="blog__item-date">
 							<p class="number">15</p>
 							<p class="month">Jan</p>
@@ -534,7 +539,7 @@
 						</div>
 					</div>
 					<div class="blog__item">
-						<img src="img/blog-img-2.png" alt="Laptop view from the top">
+						<img src="./img/blog-img-2.png" alt="Laptop view from the top">
 						<div class="blog__item-date">
 							<p class="number">14</p>
 							<p class="month">Jan</p>
@@ -549,7 +554,7 @@
 						</div>
 					</div>
 					<div class="blog__item">
-						<img src="img/blog-img-3.png" alt="Man with charts">
+						<img src="./img/blog-img-3.png" alt="Man with charts">
 						<div class="blog__item-date">
 							<p class="number">12</p>
 							<p class="month">Jan</p>
@@ -569,7 +574,7 @@
 			<!-- ##############################   open map  ##############################-->
 		<section class="map">
 			<div class="map__bg"></div>
-			<img src="../img/icons/pin-icon.png" class="map-marker" alt="Map marker" />
+			<img src="./img/icons/pin-icon.png" class="map-marker" alt="Map marker" />
 			<h2 class="map-text"> open map</h2>
 		</section>		
 	</main>
@@ -607,7 +612,7 @@
 				<div class="footer__item footer__item-center">
 					<h3 class="item-title">blogs</h3>
 					<figure class="item__blog blog">
-						<img class="blog-img" src="img/footer-img-1.jpg" alt="Blog article picture - title of article">
+						<img class="blog-img" src="./img/footer-img-1.jpg" alt="Blog article picture - title of article">
 						<figcaption class="blog-caption">
 							<h4 class="blog-description">
 								lorem ipsum dolor sit amet, consectetur adipiscing
@@ -618,7 +623,7 @@
 						</figcaption>
 					</figure>
 					<figure class="item__blog blog">
-						<img class="blog-img" src="img/footer-img-2.jpg" alt="Blog article picture - title of article">
+						<img class="blog-img" src="./img/footer-img-2.jpg" alt="Blog article picture - title of article">
 						<figcaption class="blog-caption">
 							<h4 class="blog-description">
 								Consectetur adipiscing elit, sed do eiusmod tempor
@@ -629,7 +634,7 @@
 						</figcaption>
 					</figure>
 					<figure class="item__blog blog">
-						<img class="blog-img" src="img/footer-img-3.jpg" alt="Blog article picture - title of article">
+						<img class="blog-img" src="./img/footer-img-3.jpg" alt="Blog article picture - title of article">
 						<figcaption class="blog-caption">
 							<h4 class="blog-description">
 								sed do eiusmod tempor incididunt ut labore
@@ -643,15 +648,15 @@
 				<div class="footer__item footer__item-right">
 					<h3 class="item-title">instagram</h3>
 					<ul class="instagram-photos">
-						<li class="photo"><img src="img/insta-9.jpg" alt="Instagram - nice view"></li>
-						<li class="photo"><img src="img/insta-8.jpg" alt="Instagram - nice view"></li>
-						<li class="photo"><img src="img/insta-7.jpg" alt="Instagram - nice view"></li>
-						<li class="photo"><img src="img/insta-6.jpg" alt="Instagram - nice view"></li>
-						<li class="photo"><img src="img/insta-5.jpg" alt="Instagram - nice view"></li>
-						<li class="photo"><img src="img/insta-4.jpg" alt="Instagram - nice view"></li>
-						<li class="photo"><img src="img/insta-3.jpg" alt="Instagram - nice view"></li>
-						<li class="photo"><img src="img/insta-2.jpg" alt="Instagram - nice view"></li>
-						<li class="photo"><img src="img/insta-1.jpg" alt="Instagram - nice view"></li>
+						<li class="photo"><img src="./img/insta-9.jpg" alt="Instagram - nice view"></li>
+						<li class="photo"><img src="./img/insta-8.jpg" alt="Instagram - nice view"></li>
+						<li class="photo"><img src="./img/insta-7.jpg" alt="Instagram - nice view"></li>
+						<li class="photo"><img src="./img/insta-6.jpg" alt="Instagram - nice view"></li>
+						<li class="photo"><img src="./img/insta-5.jpg" alt="Instagram - nice view"></li>
+						<li class="photo"><img src="./img/insta-4.jpg" alt="Instagram - nice view"></li>
+						<li class="photo"><img src="./img/insta-3.jpg" alt="Instagram - nice view"></li>
+						<li class="photo"><img src="./img/insta-2.jpg" alt="Instagram - nice view"></li>
+						<li class="photo"><img src="./img/insta-1.jpg" alt="Instagram - nice view"></li>
 					</ul>
 					<p><a href="#" class="more-photos">view more photos</a></p>
 				</div>
