@@ -5,11 +5,13 @@ const 	el = document.querySelector('header'),
 		vH = document.documentElement.clientHeight || window.innerHeight,
 		vW = document.documentElement.clientWidth || window.innerWidth,
 		counter = document.querySelector(".facts").getBoundingClientRect(),
-		burgerButton = document.querySelector(".burger"),
+		burgerButton = document.querySelector(".burger .fa"),
 		main = document.querySelector("main"),
 		footer = document.querySelector("footer"),
-		menuLink = document.querySelectorAll(".nav__link");
-		let start = false;
+		menuLink = document.querySelectorAll(".nav__link"),
+		logoNav = document.querySelector(".logo__nav");
+
+let flag = false;
 
 
 // ############### adding background to nav at onscroll ######################
@@ -42,13 +44,13 @@ window.onscroll = function () {
 
 	for (let i = anchors.length - 1; i >= 0; i--){
 
-  		let anchor = anchors[i].className.split(" ")[0],
-	  		compare = document.querySelector("."+anchor),
-	  		compareId = document.querySelector("#"+anchor);
+  		let anchor = anchors[i].className.split(" ")[0];
+	  	const	compare = document.querySelector("."+anchor),
+	  			compareId = document.querySelector("#"+anchor);
 
   		if (pageBottom >= bodyHeight - 100) {
 
-  			let active = document.querySelector(".nav__link--active");
+  			const active = document.querySelector(".nav__link--active");
   				active.classList.remove("nav__link--active");
 
   			const getContactAnchor = document.querySelector("a[href='#footer']");
@@ -56,10 +58,10 @@ window.onscroll = function () {
 
   		} else if (bodyScrollTop >= compare.offsetTop - 300) {
 
-  			let active = document.querySelector(".nav__link--active");
+  			const active = document.querySelector(".nav__link--active");
   				active.classList.remove("nav__link--active");
 
-  			let createActive = document.querySelector("a[href='#"+ anchor + "']");
+  			const createActive = document.querySelector("a[href='#"+ anchor + "']");
   				createActive.classList.add("nav__link--active");
 
   			return;
@@ -94,7 +96,7 @@ function init () {
 
 	let bodyScrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
-    if (bodyScrollTop >= 200 ) {
+    if (bodyScrollTop >= 200) {
 
         el.classList.remove("nav-transparent");
         el.classList.add("nav-colored");
@@ -221,7 +223,7 @@ function dropdown() {
 
 			hand[i].addEventListener("click", function () {
 
-				let infoCaptionAll = document.querySelectorAll(".info__caption");
+				const infoCaptionAll = document.querySelectorAll(".info__caption");
 
 				for ( let i = 0; i < infoCaptionAll.length; i++){
 
@@ -246,7 +248,7 @@ function slider () {
 
 	for (let i = 0; i < slider.length; i++) {
 
-		const 	slides 	= slider[i].querySelectorAll(".slide"),
+		let 	slides 	= slider[i].querySelectorAll(".slide"),
 				goLeft 	= slider[i].querySelector(".arrow-right"),
 				goRight = slider[i].querySelector(".arrow-left");
 		
@@ -258,29 +260,42 @@ function slider () {
 		}
 
 		goLeft.addEventListener("click", function () {
+		
+		click++;
 
-			if (click >= slides.length - 1) {
+			if (click >=  slides.length) {
+				click = 0;
 
-					return;
+				for (let j = 0; j < slides.length; j++) {
 
-				} else {
-
-					for (let i = 0; i < slides.length; i++) {
-
-						let leftVal = parseInt(slides[i].style.left, 10);
-						slides[i].style.left = leftVal - 100 + "%";
-
-					}	
+					let leftVal = parseInt(slides[j].style.left, 10);
+					slides[j].style.left = leftVal + 200 + "%";
+					
 				}
 
-			click++;
-		});
+			} else {
+
+				for (let i = 0; i < slides.length; i++) {
+
+					let leftVal = parseInt(slides[i].style.left, 10);
+					slides[i].style.left = leftVal - 100 + "%";
+
+				}	
+			}
+
+			});
 
 		goRight.addEventListener("click", function () {
 
 			if (click <= 0) {
-				click = 0;
-				return;
+				click = slides.length;
+
+				for (let j = 0; j < slides.length; j++) {
+
+					let leftVal = parseInt(slides[j].style.left, 10);
+					slides[j].style.left = leftVal - 200 + "%";
+					
+				}
 
 			} else {
 
@@ -301,7 +316,7 @@ function slider () {
 
 function countingUp(go) {
 
-	if ( start === false && go == 0) {
+	if ( flag === false && go == 0) {
 		let a = 0,
 			b = 3,
 			c = 7;
@@ -333,7 +348,7 @@ function countingUp(go) {
 					};
 			}, 10);
 		}
-		start = true;
+		flag = true;
 		go++;
 	}
 }
@@ -360,23 +375,26 @@ function preloader () {
 
 function burgerMenu () {
 
-	let elArr = [main, footer];
 
-	for (let i = 0; i < menuLink.length; i++){
-		elArr.push(menuLink[i]);
-	}
 
 	const headerNavbar = document.querySelector(".header__navbar");
 
 	burgerButton.addEventListener("click", function () {
 		headerNavbar.classList.toggle("showBurger");
+		burgerButton.classList.toggle("fa-bars");
+		burgerButton.classList.toggle("fa-times");
 	});
+
+	let elArr = [main, footer, logoNav];
+
+	for (let i = 0; i < menuLink.length; i++){
+		elArr.push(menuLink[i]);
+	}
 
 	elArr.forEach(el => el.addEventListener("click", function () {
 		headerNavbar.classList.remove("showBurger");
 	}
 	));
-
 
 }
 				

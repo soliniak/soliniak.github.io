@@ -1,8 +1,11 @@
 const gulp = require('gulp'),
 	sass = require('gulp-sass'),
     browserSync = require('browser-sync'),
-    autoprefixer = require('gulp-autoprefixer');
-    
+    autoprefixer = require('gulp-autoprefixer'),
+    minify = require('gulp-minifier');
+ 
+
+
 // Static server
 gulp.task('browserSync', function() {
     browserSync.init({
@@ -21,13 +24,29 @@ gulp.task('styles', function() {
 
 gulp.task('prefix', function(){
 
-    gulp.src('css/style.css')
+    gulp.src('css/**/*.css')
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
         }))
         .pipe(gulp.dest('dist'))
 });
+
+gulp.task('mini', function() {
+  return gulp.src('**/*').pipe(minify({
+    minify: true,
+    collapseWhitespace: true,
+    conservativeCollapse: true,
+    minifyJS: true,
+    minifyCSS: true,
+    getKeptComment: function (content, filePath) {
+        var m = content.match(/\/\*![\s\S]*?\*\//img);
+        return m && m.join('\n') + '\n' || '';
+    }
+  })).pipe(gulp.dest('example/dest'));
+});
+ 
+
 
 //Watch task
 gulp.task('watch', ['browserSync', 'styles', 'prefix'], function() {

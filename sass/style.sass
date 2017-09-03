@@ -32,9 +32,6 @@ a
 a[ id= "contact" ]:target
 	transition: all 3s linear
 
-$getMini: "../img/mini/"
-$getBig: "../img/"
-
 // od #fce38a do #f38181, opacity .9
 @mixin gradient()
 	$start: #fce38a
@@ -57,8 +54,6 @@ $getBig: "../img/"
 	position: fixed
 	left: 0
 	top: 0
-	padding-top: 1rem
-	padding-bottom: 1.7rem
 	width: 100%
 	font-family: $big_regular
 	z-index: 100
@@ -66,12 +61,14 @@ $getBig: "../img/"
 		display: flex
 		align-items: center
 		justify-content: space-between
+		padding-top: 1rem
+		padding-bottom: 1.7rem
 	&__logo
 		margin-top: .8rem
 	&__navbar
 		position: relative
 		display: inherit
-		li, form.nav__formn 
+		li
 			display: inline
 			text-transform: uppercase
 			font-size: .8rem
@@ -84,6 +81,8 @@ $getBig: "../img/"
 	&__item
 		padding: 0
 		margin: 0
+	&__form
+		display: inline-block
 
 .burger
 	display: none
@@ -113,7 +112,7 @@ $getBig: "../img/"
 	width: 100%
 
 	&__slide
-		background-image: url("#{$getMini}banner-img.png")
+		background-image: url("../img/banner-img.png")
 		background-size: cover
 		background-position: 50% 50%
 		background-repeat: no-repeat
@@ -206,11 +205,11 @@ $getBig: "../img/"
 			visibility: hidden
 
 		&--team
-			background-image: url('#{$getBig}about-img1.png')
+			background-image: url('../img/about-img1.png')
 		&--flow
-			background-image: url('#{$getBig}about-img2.png')
+			background-image: url('../img/about-img2.png')
 		&--capabilities
-			background-image: url('#{$getBig}about-img3.png')
+			background-image: url('../img/about-img3.png')
 
 		&:hover
 			box-shadow: 8px 8px 0 0 rgba($blueish, .7)
@@ -290,7 +289,7 @@ $getBig: "../img/"
 		padding-top: 8rem
 	&::after
 		content: ''
-		background-image: url('#{$getMini}feature-bg-img.png')
+		background-image: url('../img/feature-bg-img.png')
 		background-position: 50% 35%
 		background-size: cover
 		background-repeat: no-repeat
@@ -313,7 +312,7 @@ $getBig: "../img/"
 			bottom: 0
 			
 		&--ipad
-			background-image: url('#{$getBig}feature-ipad-img.png')
+			background-image: url('../img/feature-ipad-img.png')
 			background-position: 50% 50%
 			background-size: contain
 			background-repeat: no-repeat
@@ -322,7 +321,7 @@ $getBig: "../img/"
 			position: absolute
 			bottom: -195px
 		&--iphone
-			background-image: url('#{$getBig}feature-iphone-img.png')
+			background-image: url('../img/feature-iphone-img.png')
 			background-position: 50% 50%
 			background-size: contain
 			background-repeat: no-repeat
@@ -340,7 +339,7 @@ $getBig: "../img/"
 	&--img
 		width: 50%
 		height: 380px
-		background-image: url('#{$getBig}what-do-we-do-img.png')
+		background-image: url('../img/what-do-we-do-img.png')
 		background-size: cover
 		background-repeat: no-repeat
 	&--info
@@ -449,22 +448,20 @@ $getBig: "../img/"
 
 .who
 	&__item
-		width: 380px
 		height: 470px
-
 		background-size: cover
 		background-repeat: no-repeat
 		background-position: center center
 		padding: 0
 
 		&--matt
-			background-image: url('#{$getBig}our-team-img-1.png') 
+			background-image: url('../img/our-team-img-1.png') 
 
 		&--chris
-			background-image: url('#{$getBig}our-team-img-2.png') 
+			background-image: url('../img/our-team-img-2.png') 
 
 		&--michael
-			background-image: url('#{$getBig}our-team-img-3.png') 
+			background-image: url('../img/our-team-img-3.png') 
 
 		&--description
 			width: 100%
@@ -521,15 +518,15 @@ $getBig: "../img/"
 		transition: all .1s ease-in-out
 
 		&-a
-			background: url('#{$getBig}our-work-img-1x.png') no-repeat
+			background: url('../img/our-work-img-1x.png') no-repeat
 			background-size: cover
 			background-position: center
 		&-b
-			background: url('#{$getBig}our-work-img-2x.png') no-repeat
+			background: url('../img/our-work-img-2x.png') no-repeat
 			background-size: cover
 			background-position: center
 		&-c
-			background: url('#{$getBig}our-work-img-3x.png') no-repeat
+			background: url('../img/our-work-img-3x.png') no-repeat
 			background-size: cover
 			background-position: center
 			grid-column-start: 3
@@ -538,19 +535,19 @@ $getBig: "../img/"
 			grid-row-end: span 2
 
 		&-d
-			background: url('#{$getBig}our-work-img-4x.png') no-repeat
+			background: url('../img/our-work-img-4x.png') no-repeat
 			background-size: cover
 			background-position: center
 		&-e
-			background: url('#{$getBig}our-work-img-5x.png') no-repeat
+			background: url('../img/our-work-img-5x.png') no-repeat
 			background-size: cover
 			background-position: center
 		&-f
-			background: url('#{$getBig}our-work-img-6x.png') no-repeat
+			background: url('../img/our-work-img-6x.png') no-repeat
 			background-size: cover
 			background-position: center
 		&-g
-			background: url('#{$getBig}our-work-img-7x.png') no-repeat
+			background: url('../img/our-work-img-7x.png') no-repeat
 			background-size: cover
 			background-position: center
 		&:hover
@@ -592,7 +589,7 @@ $getBig: "../img/"
 	position: relative
 	&::after
 		content: ''
-		background-image: url('#{$getMini}testimonial-bg-img.png')
+		background-image: url('../img/testimonial-bg-img.png')
 		background-position: 50% 50%
 		background-size: cover
 		background-repeat: no-repeat
@@ -762,7 +759,7 @@ $getBig: "../img/"
 		animation-iteration-count: infinite
 	&__bg
 		content: ''
-		background: url('#{$getMini}map-bg-img.png') center center no-repeat
+		background: url('../img/map-bg-img.png') center center no-repeat
 		background-size: cover
 		opacity: .15
 		position: absolute
@@ -914,7 +911,7 @@ $getBig: "../img/"
 		font-size: .7rem
 		text-transform: none
 .arrow
-	background: url('#{$getBig}arrow.png') center center no-repeat
+	background: url('../img/arrow.png') center center no-repeat
 	display: block
 	border: none
 	transition: transform .5s linear
@@ -964,19 +961,22 @@ $getBig: "../img/"
 
 	.template-author
 		color: $sunset
+
+.fa-search
+	color: #fff
 .icon
-	&-search
-		display: inline-block
-		background-image: url('../img/icons/search-icon.png')
-		background-repeat: no-repeat
-		height: 1rem
-		width: 1rem
-	&-cart
-		display: inline-block
-		background-image: url('../img/icons/cart-icon.png')
-		background-repeat: no-repeat
-		height: 1rem
-		width: 1rem
+	// &-search
+	// 	display: inline-block
+	// 	background-image: url('../img/icons/search-icon.png')
+	// 	background-repeat: no-repeat
+	// 	height: 1rem
+	// 	width: 1rem
+	// &-cart
+	// 	display: inline-block
+	// 	background-image: url('../img/icons/cart-icon.png')
+	// 	background-repeat: no-repeat
+	// 	height: 15px
+	// 	width: 18px
 	&-services
 		display: block
 		float: left
@@ -1000,7 +1000,7 @@ $getBig: "../img/"
 		display: block
 		float: left
 	&-quote2
-		background-image: url('#{$getMini}testimonial-img.jpg')
+		background-image: url('../img/testimonial-img.jpg')
 		background-size: cover
 		background-position: center center
 		display: block

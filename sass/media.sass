@@ -2,10 +2,9 @@
 
 @media (max-width: 1200px)
 	.nav-colored
-		background-color: red
+		background-color: #f38181
 	.about__item, .who__item
 		box-sizing: border-box
-		margin: 1rem
 	.testimonials__items
 		box-sizing: border-box
 		padding-left: 2rem
@@ -39,7 +38,7 @@
 			text-align: center
 	.instagram-photos
 		display: flex
-		justify-content: space-between
+		justify-content: center
 	.more-photos
 		text-align: right
 		position: relative
@@ -105,8 +104,8 @@
 		width: 100%
 		margin-left: 0
 	.testimonials__person
-		width: 80%
-		margin-bottom: 0
+		width: 100%
+		margin-bottom: 1rem
 	.testimonials__items
 		display: flex
 		align-items: center
@@ -166,8 +165,14 @@
 		border-bottom: 1px solid #e5e5e5
 		height: auto
 		padding: 1rem 0
+
+		&:last-child
+			border: 0
+	.feature__item-two
+		right: 1rem
 	.feature__item--iphone
-		left: 180px
+		right: 0
+		left: 0
 	.blog__items
 		flex-direction: column
 		padding-top: 0
@@ -191,8 +196,9 @@
 	.header__navbar
 	    position: absolute
 	    left: 0
-	    top: -1000%
-	    background-color: green
+	    top: -1000px
+	    background-color: rgba(252, 227, 138, .99)
+	    background: linear-gradient(rgba(252, 227, 138, 1), rgba(243, 129, 129, 1));
 	    height: auto
 	    width: 100%
 	    display: block
@@ -200,30 +206,88 @@
 	    li
 	    	display: block
 	    	font-size: 1rem
+	    	line-height: 2rem
 	    	margin: 0
+	.nav 
+   		width: 100%
 	.nav__item 
 	    padding: 1rem 0
 	    margin: 0
 	    width: 100%
-	    border-bottom: 1px solid red
+	    border-bottom: 1px solid #f38181
 	    text-align: center
 	    display: block
+	.nav__link
+		color: #000
 
-	.nav 
-   		width: 100%
 	.nav__form 
 		display: block
 	.underline
 		display: none
+	.burger, .header__logo
+		padding: 1rem
+		z-index: 1
+		position: absolute
+		display: block
+		font-size: 1.5rem
+		top: .5rem
+		margin: 0
 	.burger
-	    z-index: 1
-	    position: absolute
-	    right: 0
-	    top: 0
-	    padding: 1rem
-	    display: block
-	    font-size: 1rem
+		right: 1rem
+
+		.fa-bars, .fa-times
+	    	font-size: 1.5rem
+
+
 	.header__logo
-		margin-top: 0
+		left: 1rem
+
+	.logo__nav
+		color: #000
+
 	.showBurger
 		top: 0
+	.header__container
+		height: 2rem
+	.fa-search
+		color: #000
+	.who__items, .about__items
+		flex-direction: column
+	.who__item, .about__item
+		margin-bottom: 1rem
+		width: 100%
+		height: 170px
+
+	.who__item--chris
+		background-position-y: 30%
+	.who__item--matt
+		background-position-y: 20%
+	.who__item--michael
+		background-position-y: 15%
+
+	.quote__text
+		font-size: 1rem
+	.icon-quote2
+		padding: 4rem
+
+
+
+// ############################## 580px #####################			
+@media (max-width: 580px)
+
+	.services--description
+		margin-left: 3.5rem
+	.facts
+		display: none
+	.quote__item
+		flex-direction: column
+	.quote__text
+		font-size: 1rem
+		text-align: center
+		margin-top: 1rem
+		line-height: 1rem
+	.icon-quote2
+		padding: 2.5rem
+	.icon-quote
+		float: none
+		padding: 2rem

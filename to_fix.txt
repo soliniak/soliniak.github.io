@@ -20,3 +20,4 @@ To do:
 - convert sliders to be draggable
 - make iphone to drive in while on screen
 - change section "SOME OF OUR WORK" from grid to flex to support layout on IE...
+- Minifying files

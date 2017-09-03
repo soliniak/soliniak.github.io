@@ -38,8 +38,6 @@ a[id="contact"]:target {
   position: fixed;
   left: 0;
   top: 0;
-  padding-top: 1rem;
-  padding-bottom: 1.7rem;
   width: 100%;
   font-family: Montserrat-Regular;
   z-index: 100; }
@@ -52,13 +50,15 @@ a[id="contact"]:target {
     align-items: center;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between; }
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1.7rem; }
   .header__logo {
     margin-top: .8rem; }
   .header__navbar {
     position: relative;
     display: inherit; }
-    .header__navbar li, .header__navbar form.nav__formn {
+    .header__navbar li {
       display: inline;
       text-transform: uppercase;
       font-size: .8rem;
@@ -71,6 +71,8 @@ a[id="contact"]:target {
   .nav__item {
     padding: 0;
     margin: 0; }
+  .nav__form {
+    display: inline-block; }
 
 .burger {
   display: none; }
@@ -100,7 +102,7 @@ a[id="contact"]:target {
 .slider {
   width: 100%; }
   .slider__slide {
-    background-image: url("../img/mini/banner-img.png");
+    background-image: url("../img/banner-img.png");
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -332,7 +334,7 @@ a[id="contact"]:target {
     padding-top: 8rem; }
   .feature::after {
     content: '';
-    background-image: url("../img/mini/feature-bg-img.png");
+    background-image: url("../img/feature-bg-img.png");
     background-position: 50% 35%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -502,7 +504,6 @@ a[id="contact"]:target {
       margin: 1.5rem .6rem 0 0; }
 
 .who__item {
-  width: 380px;
   height: 470px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -673,7 +674,7 @@ a[id="contact"]:target {
   position: relative; }
   .testimonials::after {
     content: '';
-    background-image: url("../img/mini/testimonial-bg-img.png");
+    background-image: url("../img/testimonial-bg-img.png");
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -868,7 +869,7 @@ a[id="contact"]:target {
     animation-iteration-count: infinite; }
   .map__bg {
     content: '';
-    background: url("../img/mini/map-bg-img.png") center center no-repeat;
+    background: url("../img/map-bg-img.png") center center no-repeat;
     background-size: cover;
     opacity: .15;
     position: absolute;
@@ -1109,19 +1110,8 @@ a[id="contact"]:target {
   .credits .template-author {
     color: #f38181; }
 
-.icon-search {
-  display: inline-block;
-  background-image: url("../img/icons/search-icon.png");
-  background-repeat: no-repeat;
-  height: 1rem;
-  width: 1rem; }
-
-.icon-cart {
-  display: inline-block;
-  background-image: url("../img/icons/cart-icon.png");
-  background-repeat: no-repeat;
-  height: 1rem;
-  width: 1rem; }
+.fa-search {
+  color: #fff; }
 
 .icon-services {
   display: block;
@@ -1149,7 +1139,7 @@ a[id="contact"]:target {
   float: left; }
 
 .icon-quote2 {
-  background-image: url("../img/mini/testimonial-img.jpg");
+  background-image: url("../img/testimonial-img.jpg");
   background-size: cover;
   background-position: center center;
   display: block;
