@@ -2,8 +2,8 @@ const gulp = require('gulp'),
 	sass = require('gulp-sass'),
     browserSync = require('browser-sync'),
     autoprefixer = require('gulp-autoprefixer'),
-    minify = require('gulp-minifier');
- 
+    minify = require('gulp-minifier'),
+	babel = require("gulp-babel");
 
 
 // Static server
@@ -57,4 +57,9 @@ gulp.task('watch', ['browserSync', 'styles', 'prefix'], function() {
     gulp.watch('*.js', browserSync.reload);
 });
 
- 
+// Babel
+gulp.task("babel", function () {
+  return gulp.src("./script.js")
+    .pipe(babel())
+    .pipe(gulp.dest("dist"));
+});

@@ -393,8 +393,7 @@ function burgerMenu () {
 
 	elArr.forEach(el => el.addEventListener("click", function () {
 		headerNavbar.classList.remove("showBurger");
-	}
-	));
+	}));
 
 }
 				

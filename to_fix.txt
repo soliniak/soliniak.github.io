@@ -3,7 +3,7 @@ To do:
 /- fix width of underline at start / width 40 should be 46 / - done //  js was loading before css. Adding window.onload into DOMContentLoaded fixed the problem //
 /- underline moves depending on section - done // using offsetHeight, value of the end of the page is provided, that allows to trigger contact underline //
 /- padding in subscribe - done // added prefixes to handle all browsers //
-- lower resolution of pictures
+/- lower resolution of pictures - done
 - make css for scroll for ff and ie
 /- sliders - done // one function supports all sliders ;) //
 /- overlay for pictures hover - done //
@@ -19,5 +19,7 @@ To do:
 - add loop into sliders and drag event
 - convert sliders to be draggable
 - make iphone to drive in while on screen
-- change section "SOME OF OUR WORK" from grid to flex to support layout on IE...
-- Minifying files
+- change section "SOME OF OUR WORK" from grid to flex to support layout on IE, Safari etc...
+/- Minifying files - done
+/- added babel - done
+- make it look good on iphone in safari and chrome
