@@ -1,23 +1,21 @@
 {
-  "name": "mogo",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "Dev Challange 35",
-  "main": "Gulpfile.js",
+  "description": "Rafał Soliński - Portfolio",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "portfolio"
   },
   "author": "Rafi",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.0",
-    "browser-sync": "^2.18.12",
+    "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
-    "gulp-babel": "^7.0.0",
-    "gulp-install": "^1.1.0",
-    "gulp-minifier": "^0.2.2",
     "gulp-sass": "^3.1.0"
   }
 }

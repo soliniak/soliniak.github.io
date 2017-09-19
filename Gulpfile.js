@@ -1,65 +1,42 @@
-const gulp = require('gulp'),
-	sass = require('gulp-sass'),
-    browserSync = require('browser-sync'),
-    autoprefixer = require('gulp-autoprefixer'),
-    minify = require('gulp-minifier'),
-	babel = require("gulp-babel");
+const 	gulp 			= require('gulp'),
+		sass 			= require('gulp-sass'),
+		browserSync 	= require('browser-sync'),
+		autoprefixer 	= require('gulp-autoprefixer');
 
+// Server - Browser Sync
 
-// Static server
-gulp.task('browserSync', function() {
-    browserSync.init({
-        server: {
-            baseDir: "./"
-        }
-    });
+gulp.task('browserSync', function () {
+	browserSync.init({
+		server: {
+			baseDir: "src/"
+		}
+	});
 });
+
+// SASS compiler
 
 gulp.task('styles', function() {
-    gulp.src('sass/**/*.sass')
+    gulp.src('./src/sass/**/*.sass')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./css/'))
+        .pipe(gulp.dest('./src/css/'))
 });
 
 
-gulp.task('prefix', function(){
+// CSS prefixing - handle manually
 
-    gulp.src('css/**/*.css')
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
-        .pipe(gulp.dest('dist'))
+gulp.task('prefix', function () {
+	gulp.src('src/css/*.css')
+		.pipe(autoprefixer({
+			browsers: ['last 4 versions'],
+			cascade: false
+		}))
+		.pipe(gulp.dest('src/css/pref/'))
 });
 
-gulp.task('mini', function() {
-  return gulp.src('**/*').pipe(minify({
-    minify: true,
-    collapseWhitespace: true,
-    conservativeCollapse: true,
-    minifyJS: true,
-    minifyCSS: true,
-    getKeptComment: function (content, filePath) {
-        var m = content.match(/\/\*![\s\S]*?\*\//img);
-        return m && m.join('\n') + '\n' || '';
-    }
-  })).pipe(gulp.dest('example/dest'));
-});
- 
 
+// Gulp watch - watching for changes in files
 
-//Watch task
-gulp.task('watch', ['browserSync', 'styles', 'prefix'], function() {
-    gulp.watch('sass/**/*.sass', ['prefix']);
-    gulp.watch('sass/**/*.sass',['styles']);
-	gulp.watch('sass/**/*.sass', browserSync.reload);
-    gulp.watch('*.html', browserSync.reload);
-    gulp.watch('*.js', browserSync.reload);
-});
-
-// Babel
-gulp.task("babel", function () {
-  return gulp.src("./script.js")
-    .pipe(babel())
-    .pipe(gulp.dest("dist"));
-});
+gulp.task('watch', ['browserSync', 'styles'], function () {
+	gulp.watch('src/sass/**/*.sass', ['styles']);
+	gulp.watch('src/**/*.*', browserSync.reload);
+})

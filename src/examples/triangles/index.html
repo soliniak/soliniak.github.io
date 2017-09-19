@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Triangles BG</title>
+	<meta name="description" content="Triangles from div's">
+	<meta name="author" content="Rafi">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+</head>
+	<script src="https://use.fontawesome.com/7b0f8a4daa.js"></script>
+<body>
+<header>
+	<div id="container" class="container">
+
+	<div class="shade">
+		<input type="text" class="newsletterForm" placeholder="Type your e-mail here">
+		<div class="inShade"></div>
+	</div>
+</header>
+
+	<script>
+
+		for(var i = 0; i <= 200; i++){
+			document.getElementById("container").innerHTML += "<div id=\"t\" class=\"t" + i + " tHide \"></div>"
+		}
+		
+		$(function(){
+				$(document).ready(function(){
+					$('div').removeClass("tHide");
+				});
+		});
+	</script>
+
+</body>
+</html>
