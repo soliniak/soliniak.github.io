@@ -1000,6 +1000,7 @@ a:hover, a:focus {
     transition: all .5s ease-in-out; }
   .menu__items {
     height: 300px;
+    width: 414px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
