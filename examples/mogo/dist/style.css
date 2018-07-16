@@ -125,11 +125,11 @@ a[id="contact"]:target {
     color: #fff; }
   .slider__caption {
     font-family: KaushanScript-Regular;
-    font-size: 3rem; }
+    font-size: 2rem; }
   .slider__subcaption {
     font-family: Montserrat-Bold;
     text-transform: uppercase;
-    font-size: 7rem;
+    font-size: 3rem;
     text-align: center;
     padding-top: 2rem; }
   .slider__button {
