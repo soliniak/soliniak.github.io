@@ -192,7 +192,10 @@
   .blog__item-caption {
     font-size: 1rem; }
   .slider__subcaption {
-    font-size: 3rem; } }
+    font-size: 3rem; } 
+    .feature__item--ipad {
+      width: 80%;
+      }}
 
 @media (max-width: 670px) {
   .header__navbar {
