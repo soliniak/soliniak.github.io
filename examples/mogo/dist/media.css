@@ -196,12 +196,18 @@
     .feature__item--ipad {
       width: 80%;
       }
+  .testimonials__person{
+    margin-bottom: 2rem;
+  }
   .testimonials__person .person-img{
     height: auto;
         }
   .testimonials__person .person-quote{
     margin: 0;
-    }}
+    }
+  .about__subheader, .services__subheader, .feature__subheader, .service_two__subheader, .feature__subheader, .who__subheader, .logos__subheader, .portfolio__subheader, .testimonials__subheader, .blog__subheader{
+    font-size: 1.5rem;
+  }}
 
 @media (max-width: 670px) {
   .header__navbar {
