@@ -195,7 +195,13 @@
     font-size: 3rem; } 
     .feature__item--ipad {
       width: 80%;
-      }}
+      }
+  .testimonials__person .person-img{
+    height: auto;
+        }
+  .testimonials__person .person-quote{
+    margin: 0;
+    }}
 
 @media (max-width: 670px) {
   .header__navbar {
