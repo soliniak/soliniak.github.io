@@ -750,7 +750,7 @@ a:hover, a:focus {
 
 @media (max-width: 375px) {
   .icon-description{
-  	dosplay: none;
+  	display: none;
   }
   .home .foto {
     margin-bottom: 0; }
