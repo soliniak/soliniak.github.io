@@ -750,8 +750,10 @@ a:hover, a:focus {
 
 @media (max-width: 375px) {
   .icon-description{
-  	display: none;
-  }
+  	display: none; }
+  .graph-column:hover .column-icon::before {
+  	content: '';
+  	display: none; }
   .home .foto {
     margin-bottom: 0; }
     .home .foto img {
