@@ -59,10 +59,10 @@ $(function(){
 	var mq = window.matchMedia( "(max-width: 500px)" );
 	if (mq.matches) {
 	  var amount = 2;
-	  console.log(amount);
+	  // console.log(amount);
 	} else {
 	  var amount = 4;
-	  console.log(amount);
+	  // console.log(amount);
 	}
 
 	var placer = 1;
