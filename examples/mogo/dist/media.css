@@ -169,14 +169,13 @@
     padding: 1rem 0; }
     .services__item:last-child {
       border: 0; }
+  .feature__item-one {
+    width: 100%; }
   .feature__item-two {
     right: 1rem; }
   .feature__item--iphone {
     right: 0;
     left: 0; }
-  .feature__item-one {
-    width: 100%;
-  }
   .blog__items {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -195,22 +194,17 @@
   .blog__item-caption {
     font-size: 1rem; }
   .slider__subcaption {
-    font-size: 3rem; } 
-    .feature__item--ipad {
-      width: 80%;
-      }
-  .testimonials__person{
-    margin-bottom: 2rem;
-  }
-  .testimonials__person .person-img{
-    height: auto;
-        }
-  .testimonials__person .person-quote{
-    margin: 0;
-    }
-  .about__subheader, .services__subheader, .feature__subheader, .service_two__subheader, .feature__subheader, .who__subheader, .logos__subheader, .portfolio__subheader, .testimonials__subheader, .blog__subheader{
-    font-size: 1.5rem;
-  }}
+    font-size: 3rem; }
+  .feature__item--ipad {
+    width: 80%; }
+  .testimonials__person {
+    margin-bottom: 2rem; }
+  .testimonials__person .person-img {
+    height: auto; }
+  .testimonials__person .person-quote {
+    margin: 0; }
+  .about__subheader, .services__subheader, .feature__subheader, .service_two__subheader, .feature__subheader, .who__subheader, .logos__subheader, .portfolio__subheader, .testimonials__subheader, .blog__subheader {
+    font-size: 1.5rem; } }
 
 @media (max-width: 670px) {
   .header__navbar {
