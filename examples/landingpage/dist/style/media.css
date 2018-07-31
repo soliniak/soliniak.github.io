@@ -1,0 +1,21 @@
+@media (max-width: 1600px) {
+  .content_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 3rem; }
+  .section_image {
+    align-self: center;
+    position: relative;
+    order: 2; }
+  .s-content {
+    order: 1; }
+  .margin-01-separator, .margin-02, .width-02 {
+    margin: 0; }
+  .move_left {
+    transform: none; }
+  .main-footer {
+    bottom: -400px; }
+  .width-01, .width-02, .width-03, .width-04 {
+    width: 100%; } }
