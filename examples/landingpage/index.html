@@ -12,36 +12,41 @@
 	</head>
 	<body>
 		<header class="top_bar">
-			<h1 class="logo_and_link flex-center-center flex-row"><img src="src/images/gift-icon.png" class="gift-icon"><a href="" class="home-link"> Zapakujloremipsum.com </a></h1>
-			<nav>
-				<ul class="flex-center-center flex-row">
+			<h1 class="logo_and_link flex-center-center flex-row">
+				<img src="dist/images/gift-icon.png" class="gift-icon" alt="Logo firmy Zapakujloremipsum"><a href="" class="home-link"> Zapakujloremipsum.com </a>
+			</h1>
+			<nav class="nav_container">
+				<button aria-expanded="false" aria-controls="main_menu" type="button" class="ocMenu btn btn-blue"> Pokaż menu </button>
+				<ul class="flex-center-center flex-row burger_menu" id="main_menu">
 					<li class="navigation_item"><a href="#" class="link"> procesy </a></li>
 					<li class="navigation_item"><a href="#" class="link"> usługi </a></li>
 					<li class="navigation_item"><a href="#" class="link link-active"> kontakt </a></li>
 				</ul>
 			</nav>
 		</header>
-		<main class="flex-center-center flex-row">
+		<main class="main_container">
 			<section class="section leftside"></section>
-			<section class="section rightside flex-center-center">
+			<section class="section rightside flex-center-center flex-start">
 				<form class="form flex-center-center flex-column">
-					<fieldset class="rightside_form">
-						<legend><h2 class="form-header">napisz do mnie</h2></legend>
-						<div class="email-name">
-							<label for="email" class="rightside-label">
-								<span class="label-text"> Email </span><input type="text" name="user_email" id="email" class="rightside_input rightside-email" placeholder="Podaj email" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" required>
-							</label>
-							<label for="name" class="rightside-label"> 
-								<span class="label-text"> Imię </span> <input type="text" name="user_name" id="name" class="rightside_input rightside-name" placeholder="Podaj imię" required>
+					<fieldset>
+						<div class="rightside_form">
+							<legend><h2 class="form-header">napisz do mnie</h2></legend>
+							<div class="email-and-name">
+								<label for="email" class="rightside-label">
+									<span class="label-text"> Email </span><input type="text" name="user_email" id="email" class="rightside_input rightside-email" placeholder="Podaj email" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" required>
+								</label>
+								<label for="name" class="rightside-label"> 
+									<span class="label-text"> Imię </span> <input type="text" name="user_name" id="name" class="rightside_input rightside-name" placeholder="Podaj imię" required>
+								</label>
+							</div>
+							<label for="message" class="rightside-label"> 
+								<span class="label-text"> Wiadomość </span>
+								<div class="rightside_textarea"> 
+									<p class="content" name="user_message" id="message" contenteditable="true"> Uchylone drzwi wpłynął do wielkiej, który ciągnął się pancerz zewnętrzny od pożaru. Powietrze było ich do kieszeni, wygonić znajdującą się nieoczekiwanie fortuny, kiedy je odczytywać z aparatu w każdej z świętych trajektometr, sobie epokach, na sprężynującej desce, zawieszony zostałoby mu pół korony. Wskazują okrwawionym też z piętnaście sprawie własną przed sklepem na Dyerhoffa Niepokalany, bo na wpół domyślny był to tylko unieruchomiło. Chyba zimno. Butami? Zaszła nieodwołalnie za. Uchylone drzwi wpłynął do wielkiej, który ciągnął się pancerz zewnętrzny od pożaru. Powietrze było ich do kieszeni, wygonić znajdującą się nieoczekiwanie fortuny, kiedy je odczytywać z aparatu w każdej z świętych trajektometr, sobie epokach, na sprężynującej desce, zawieszony zostałoby mu pół korony. Wskazują okrwawionym też z piętnaście sprawie własną przed sklepem na Dyerhoffa Niepokalany, bo na wpół domyślny był to tylko unieruchomiło. Chyba zimno. Butami? Zaszła nieodwołalnie za.
+									</p>
+								</div>
 							</label>
 						</div>
-						<label for="message" class="rightside-label"> 
-							<span class="label-text"> Wiadomość </span>
-							<div class="rightside_textarea"> 
-								<p class="content" name="user_message" id="message" contenteditable="true"> Uchylone drzwi wpłynął do wielkiej, który ciągnął się pancerz zewnętrzny od pożaru. Powietrze było ich do kieszeni, wygonić znajdującą się nieoczekiwanie fortuny, kiedy je odczytywać z aparatu w każdej z świętych trajektometr, sobie epokach, na sprężynującej desce, zawieszony zostałoby mu pół korony. Wskazują okrwawionym też z piętnaście sprawie własną przed sklepem na Dyerhoffa Niepokalany, bo na wpół domyślny był to tylko unieruchomiło. Chyba zimno. Butami? Zaszła nieodwołalnie za. Uchylone drzwi wpłynął do wielkiej, który ciągnął się pancerz zewnętrzny od pożaru. Powietrze było ich do kieszeni, wygonić znajdującą się nieoczekiwanie fortuny, kiedy je odczytywać z aparatu w każdej z świętych trajektometr, sobie epokach, na sprężynującej desce, zawieszony zostałoby mu pół korony. Wskazują okrwawionym też z piętnaście sprawie własną przed sklepem na Dyerhoffa Niepokalany, bo na wpół domyślny był to tylko unieruchomiło. Chyba zimno. Butami? Zaszła nieodwołalnie za.
-								</p>
-							</div>
-						</label>
 					</fieldset>
 					<button class="btn btn-blue">Napisz do mnie</button>
 				</form>
@@ -54,16 +59,17 @@
 					<div class="fieldset-flex">
 						<label for="subscription-name" class="subscription_label">
 							<input type="text" name="subscription_user-name" class="subscription_input" id="subscription-name" required>
-							<span class="subscription_label-text"> <img src="src/images/user-icon.png" class="user-icon"> Imię</span>  
+							<span class="subscription_label-text"> <img src="dist/images/user-icon.png" class="user-icon"> Imię</span>  
 						</label>
 						<label for="subscription-email" class="subscription_label">
 							<input type="text" name="subscription_user-email"  class="subscription_input" id="subscription-email" required>
-							<span class="subscription_label-text"> <img src="src/images/email-icon.png" class="email-icon"> E-mail</span> 
+							<span class="subscription_label-text"> <img src="dist/images/email-icon.png" class="email-icon"> E-mail</span> 
 						</label>
 					</div>
 				</fieldset>
 				<button class="btn btn-white"> Zapisz mnie </button>
 			</form>
 		</footer>
+		<script src="script.js"></script>
 	</body>
 </html>
