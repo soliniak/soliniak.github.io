@@ -13,31 +13,6 @@ window.addEventListener("scroll", ()=>{
 	}
 });
 
-// ------- TOP BAR FIXED END -------- //
-
-// ---------------------------------------- SMOOTH SCROLL START -------------------------------------------------- //
-
-// const links = document.querySelectorAll("a");
-
-// links.forEach((link, index)=>{
-	
-
-
-// 	console.log(link.href);
-// });
-
-
-
-// ----- SMOOTH SCROLL END --------- //
-
-// const orderBtns = document.querySelectorAll(".order-now");
-// const tables = document.querySelectorAll(".table");
-
-// orderBtns.forEach((el, i)=>{
-// 	el.addEventListener("focus", ()=>{
-// 		tables[i].style.transform = "scale(2)";
-// 		})
-// })
 
 // ---------------------------------------- MODAL START -------------------------------------------------- //
 
@@ -71,9 +46,6 @@ regBtns.forEach((el, index)=>{
 		modal.querySelector("input[name=login]").focus();
 	})
 });
-
-
-// -------- MODAL END ---------- //
 
 // ---------------------------------------- SECTION 04 - CAROUSEL START -------------------------------------------------- //
 
@@ -127,10 +99,8 @@ function spin(to){
 		allEls[to].setAttribute("aria-hidden", "false");
 };
 
-// ------ SECTION 04 - CAROUSEL END ---------- //
-
-
 // ----------------------------- AUTO HIDE MENU BAR --------------------------------
+
 const html = document.querySelector('html');
 
 html.addEventListener('wheel', findScrollDirectionOtherBrowsers);
@@ -144,7 +114,7 @@ function findScrollDirectionOtherBrowsers(event){
     }
 
     if (delta < 0){
-        menu.style.marginTop = -100+"%";
+        menu.style.marginTop = -100+"px";
     }else if (delta > 0){
         menu.style.marginTop = 0;
     }
@@ -174,7 +144,7 @@ toggleBtn.addEventListener("click", ()=>{
 	}
 });
 
-if(window.innerWidth < 670){
+if(window.innerWidth < 760){
 	menuItem.forEach((item)=>{
 		item.addEventListener("click", ()=>{
 			close();
