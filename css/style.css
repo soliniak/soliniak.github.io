@@ -80,8 +80,9 @@ a:hover, a:focus{color:#f8d44a;}
 .jsdev{left:-25px;}
 .burger{display:none;}
 .portfolio__items{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-between;align-items:center;height:auto;padding:2rem 2rem 0 0;}
-.portfolio__item{width:30%;margin:0 0 2rem 2rem;box-sizing:border-box;position:relative;}
+.portfolio__item{width:30%;margin:0 0 2rem 2rem;box-sizing:border-box;position:relative;opacity:.8;}
 .portfolio__item img{width:100%;box-sizing:border-box;}
+.portfolio__item:hover{opacity:1;}
 .portfolio__item:hover .source, .portfolio__item:hover .live{opacity:1;}
 .portfolio__item-title{background-color:rgba(30, 30, 30, 0.5);color:#fff;display:block;font-family:Montserrat, sans-serif;font-size:.8rem;font-weight:500;padding:.2rem 0;position:absolute;text-align:center;top:0;width:100%;}
 .target{position:absolute;top:0;width:100%;height:100%;display:flex;justify-content:center;align-items:center;}
