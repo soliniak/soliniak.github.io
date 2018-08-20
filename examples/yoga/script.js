@@ -135,10 +135,18 @@ function findScrollDirectionOtherBrowsers(event){
 }
 
 let z = 0;
+// let t;
 html.addEventListener("touchmove", ()=>{
+	// console.log((((t = document.documentElement) || (t = document.body.parentNode)) && typeof t.ScrollTop == 'number' ? t : document.body).ScrollTop);
+	const xc = document.createElement("p");
+const ww = body.appendChild(xc);
+		ww.classList.add("derp");
 	if(window.pageYOffset > z){
-        menu.style.marginTop = -100+"px";		
+		
+		ww.innerText = z;
+        menu.style.marginTop = -100+"px";
 	} else {
+		ww.innerText = z;
         menu.style.marginTop = 0;
 	}
 	z = window.pageYOffset;
