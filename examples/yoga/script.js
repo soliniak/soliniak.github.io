@@ -146,13 +146,13 @@ var yW = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.docume
 	const xc = document.createElement("p");
 	const ww = body.appendChild(xc);
 	ww.classList.add("derp");
-	
+	ww.innerText = "yw " + yW;
 	if(yW > z){
 		
-		ww.innerText = z;
+		// ww.innerText = z;
         menu.style.marginTop = -100+"px";
 	} else {
-		ww.innerText = z;
+		// ww.innerText = z;
         menu.style.marginTop = 0;
 	}
 	z = yW;
