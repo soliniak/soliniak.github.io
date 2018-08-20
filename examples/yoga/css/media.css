@@ -301,7 +301,12 @@
     align-self: flex-start; }
   .toggle-btn {
     display: block;
-    height: 50px; } }
+    height: 63px;
+    border: none;
+    background-color: transparent;
+    width: 60px;
+    color: #fff;
+    font-size: 2rem; } }
 
 @media (max-width: 600px) {
   .description {
@@ -345,7 +350,11 @@
   .s-content {
     margin-bottom: 0; }
   .content_container {
-    margin-bottom: 0; } }
+    margin-bottom: 0; }
+  .modal-container {
+    width: 100%;
+    margin: 1rem;
+    padding: 1rem; } }
 
 @media (max-width: 450px) {
   .main-footer {

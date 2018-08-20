@@ -136,12 +136,12 @@ function findScrollDirectionOtherBrowsers(event){
 
 let z = 0;
 html.addEventListener("touchmove", ()=>{
-	if(window.scrollY > z){
+	if(window.pageYOffset > z){
         menu.style.marginTop = -100+"px";		
 	} else {
         menu.style.marginTop = 0;
 	}
-	z = window.scrollY;
+	z = window.pageYOffset;
 }, supportsPassive ? { passive: true } : false)
 
 // ------------------------------------- BTN TOGGLE MENU -----------------------------
@@ -151,7 +151,7 @@ const toggleBtn = document.querySelector(".toggle-btn"),
 		headerMenu = document.querySelector(".header_menu");
 
 toggleBtn.addEventListener("click", ()=>{
-	if(toggleBtn.innerText !== "CLOSE"){
+	if(toggleBtn.innerHTML !== "<i class=\"fas fa-times\"></i>"){
 		open();
 	} else {
 		close();
@@ -171,7 +171,7 @@ function close(){
 	menuItem.forEach((item)=>{
 		item.style.marginLeft = -4000+"px";
 	})
-	toggleBtn.innerText = "OPEN";
+	toggleBtn.innerHTML = "<i class=\"fas fa-bars\"></i>";
 	toggleBtn.setAttribute('aria-expanded', 'false');
 	headerMenu.style.display = "none";
 }
@@ -181,7 +181,7 @@ function open(){
 	menuItem.forEach((item)=>{
 		item.style.marginLeft = 0;
 	})
-	toggleBtn.innerText = "CLOSE";
+	toggleBtn.innerHTML = "<i class=\"fas fa-times\"></i>";
 	toggleBtn.setAttribute('aria-expanded', 'true');
 	headerMenu.style.display = "block";
 }
