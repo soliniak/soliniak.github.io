@@ -134,36 +134,12 @@ function findScrollDirectionOtherBrowsers(event){
     }
 }
 
-let z = 0;
-// let t;
-var supportPageOffset = window.pageYOffset !== undefined;
-var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
-
-
-html.addEventListener("touchmove", (e)=>{
-
-var yW = e.changedTouches[0].pageY;
-	
-	const xc = document.createElement("p");
-	const ww = body.appendChild(xc);
-	ww.classList.add("derp");
-	ww.innerText = "cH " + yW;
-	if(yW < z){
-		
-		// ww.innerText = z;
-        menu.style.marginTop = -100+"px";
-	} else {
-		// ww.innerText = z;
-        menu.style.marginTop = 0;
-	}
-	z = yW;
-}, supportsPassive ? { passive: true } : false)
-
 // ------------------------------------- BTN TOGGLE MENU -----------------------------
 
 const toggleBtn = document.querySelector(".toggle-btn"),
 		menuItem = document.querySelectorAll(".menu_item"),
-		headerMenu = document.querySelector(".header_menu");
+		headerMenu = document.querySelector(".header_menu"),
+		menuLi = document.querySelector(".menu");
 
 toggleBtn.addEventListener("click", ()=>{
 	if(toggleBtn.innerHTML !== "<i class=\"fas fa-times\"></i>"){
@@ -177,26 +153,29 @@ if(window.innerWidth < 760){
 	menuItem.forEach((item)=>{
 		item.addEventListener("click", ()=>{
 			close();
-		})
-	})
-}
+		});
+	});
+};
 
 function close(){
-	menu.style.height = 90+"px";
-	menuItem.forEach((item)=>{
-		item.style.marginLeft = -4000+"px";
-	})
+
+	menuItem.forEach((item, i)=>{
+		item.style.left = -4000+"px";
+		item.style.transitionDelay = "0s";
+	});
 	toggleBtn.innerHTML = "<i class=\"fas fa-bars\"></i>";
 	toggleBtn.setAttribute('aria-expanded', 'false');
-	headerMenu.style.display = "none";
-}
+	menu.style.height = 55+"px";
+	menuLi.style.height = 0;
+};
 
 function open(){
 	menu.style.height = 100+"%";
-	menuItem.forEach((item)=>{
-		item.style.marginLeft = 0;
-	})
+	menuLi.style.height = "auto";
+	menuItem.forEach((item, i)=>{
+		item.style.left = 0+"px";
+		item.style.transitionDelay = "0."+i+"s";
+	});
 	toggleBtn.innerHTML = "<i class=\"fas fa-times\"></i>";
 	toggleBtn.setAttribute('aria-expanded', 'true');
-	headerMenu.style.display = "block";
-}
+};
