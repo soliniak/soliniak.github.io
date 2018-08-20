@@ -136,12 +136,18 @@ function findScrollDirectionOtherBrowsers(event){
 
 let z = 0;
 // let t;
+var supportPageOffset = window.pageYOffset !== undefined;
+var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+
+
 html.addEventListener("touchmove", ()=>{
-	// console.log((((t = document.documentElement) || (t = document.body.parentNode)) && typeof t.ScrollTop == 'number' ? t : document.body).ScrollTop);
+var yW = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+	
 	const xc = document.createElement("p");
-const ww = body.appendChild(xc);
-		ww.classList.add("derp");
-	if(window.pageYOffset > z){
+	const ww = body.appendChild(xc);
+	ww.classList.add("derp");
+	
+	if(yW > z){
 		
 		ww.innerText = z;
         menu.style.marginTop = -100+"px";
@@ -149,7 +155,7 @@ const ww = body.appendChild(xc);
 		ww.innerText = z;
         menu.style.marginTop = 0;
 	}
-	z = window.pageYOffset;
+	z = yW;
 }, supportsPassive ? { passive: true } : false)
 
 // ------------------------------------- BTN TOGGLE MENU -----------------------------
