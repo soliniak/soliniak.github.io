@@ -140,14 +140,15 @@ var supportPageOffset = window.pageYOffset !== undefined;
 var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
 
 
-html.addEventListener("touchmove", ()=>{
-var yW = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+html.addEventListener("touchmove", (e)=>{
+
+var yW = e.changedTouches[0].pageY;
 	
 	const xc = document.createElement("p");
 	const ww = body.appendChild(xc);
 	ww.classList.add("derp");
-	ww.innerText = "yw " + yW;
-	if(yW > z){
+	ww.innerText = "cH " + yW;
+	if(yW < z){
 		
 		// ww.innerText = z;
         menu.style.marginTop = -100+"px";
