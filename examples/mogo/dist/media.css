@@ -210,7 +210,7 @@
   .header__navbar {
     position: absolute;
     left: 0;
-    top: -1000px;
+    top: -500px;
     background-color: rgba(252, 227, 138, 0.99);
     background: -webkit-gradient(linear, left top, left bottom, from(#fce38a), to(#f38181));
     background: linear-gradient(#fce38a, #f38181);
@@ -256,7 +256,7 @@
   .logo__nav {
     color: #000; }
   .showBurger {
-    top: 0; }
+    top: 75px; }
   .header__container {
     height: 2rem; }
   .fa-search {

@@ -393,10 +393,11 @@ function burgerMenu () {
 
 	elArr.forEach(el => el.addEventListener("click", function () {
 		headerNavbar.classList.remove("showBurger");
+		burgerButton.classList.toggle("fa-bars");
+		burgerButton.classList.toggle("fa-times");
 	}));
 
-}
-				
+
 // ############### Start => DOMContentLoaded - make sure to load JS after DOM. onload - make sure to load JS after CSS ######################
 
 document.addEventListener("DOMContentLoaded", function () {
