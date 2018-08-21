@@ -218,7 +218,7 @@
     width: 100%;
     display: block;
     -webkit-transition: all ease 1s;
-    transition: all ease 1s; }
+    transition: all ease .7s; }
     .header__navbar li {
       display: block;
       font-size: 1rem;
