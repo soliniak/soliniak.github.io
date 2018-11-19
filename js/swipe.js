@@ -17,7 +17,15 @@ function move(e) {
   if (mouseDownPosition || mouseDownPosition === 0) {
     let calculatedDirection = unify(e).clientX - mouseDownPosition,
       leftOrRight = Math.sign(calculatedDirection);
-    trackPosition += leftOrRight;
+    let threshold = +(
+      (leftOrRight * calculatedDirection) /
+      body.offsetWidth
+    ).toFixed(2);
+
+    if (threshold > 0.15) {
+      trackPosition += leftOrRight;
+    }
+
     btnAbout.addEventListener("click", () => {
       trackPosition = 1;
     });
@@ -30,9 +38,11 @@ function move(e) {
     btnGoContact.addEventListener("click", () => {
       trackPosition = -1;
     });
+
     if (trackPosition > 1) trackPosition = 1;
     if (trackPosition < -1) trackPosition = -1;
-    moveSection(trackPosition);
+
+    moveSection(trackPosition, f);
     mouseDownPosition = null;
   }
 }
