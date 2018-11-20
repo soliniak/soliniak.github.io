@@ -20,7 +20,16 @@
 
 .contact {
   left: calc(200vw - 100vw);
-  height: 90vh; }
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 @media (min-width: 1024px) {
   .about, .portfolio, .contact {
@@ -458,9 +467,6 @@
 .contact-me {
   text-align: center;
   display: none; }
-  .contact-me__container {
-    position: relative;
-    top: 230px; }
   .contact-me__data {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -471,17 +477,6 @@
     flex-direction: column;
     padding: 1rem; }
 
-@media (min-width: 375px) {
-  .contact-me__container {
-    top: 320px; }
-  .video__container {
-    height: 430px; } }
-
-@media (min-width: 414px) {
-  .contact-me__container {
-    top: 330px;
-    padding-bottom: 1rem; } }
-
 @media (min-width: 768px) {
   .contact-me__data {
     -webkit-box-orient: horizontal;
@@ -491,14 +486,7 @@
     -ms-flex-pack: distribute;
     justify-content: space-around; }
   .contact__item:last-child {
-    margin-top: 0; }
-  .contact-me__container {
-    padding-bottom: 0;
-    padding: 1rem; } }
-
-@media (min-width: 1366px) {
-  .contact-me__container {
-    top: 420px; } }
+    margin-top: 0; } }
 
 * {
   -webkit-box-sizing: border-box;
