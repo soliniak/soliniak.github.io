@@ -368,7 +368,7 @@
     padding: 10px 15px;
     font-size: .9rem;
     line-height: 1.2rem;
-    color: #b3b3b3;
+    color: #5d5d5d;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -506,7 +506,7 @@
   box-sizing: inherit; }
 
 a {
-  color: #b3b3b3;
+  color: #5d5d5d;
   font-family: Montserrat; }
 
 a:hover {
