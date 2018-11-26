@@ -1,9 +1,8 @@
 "use strict";
-
 const Projects = {
   yoga: {
     name: "yoga",
-    live: "https://soliniak.github.io/examples/yoga/index.html",
+    live: "https://soliniak.github.io/Yoga/",
     src: "https://github.com/soliniak/Yoga",
     img: "img/project_icons/yoga.jpg",
     webp: "img/project_icons/yoga.webp",
@@ -21,7 +20,7 @@ const Projects = {
   },
   zest: {
     name: "zest",
-    live: "https://soliniak.github.io/examples/zest/",
+    live: "https://soliniak.github.io/ZEST/dist/",
     src: "https://github.com/soliniak/ZEST",
     img: "img/project_icons/zest.jpg",
     webp: "img/project_icons/zest.webp",
@@ -39,7 +38,7 @@ const Projects = {
   },
   mogo: {
     name: "mogo",
-    live: "https://soliniak.github.io/examples/mogo/",
+    live: "https://soliniak.github.io/MoGo/",
     src: "https://github.com/soliniak/mogo",
     img: "img/project_icons/mogo.jpg",
     webp: "img/project_icons/mogo.webp",
@@ -57,7 +56,7 @@ const Projects = {
   },
   lorem: {
     name: "lorem",
-    live: "https://soliniak.github.io/examples/landingpage/",
+    live: "https://soliniak.github.io/zapakujloremipsum/",
     src: "https://github.com/soliniak/zapakujloremipsum",
     img: "img/project_icons/zapakujlorem.jpg",
     webp: "img/project_icons/zapakujlorem.webp",
@@ -75,7 +74,7 @@ const Projects = {
   },
   typer: {
     name: "typer",
-    live: "https://soliniak.github.io/examples/typer/",
+    live: "https://soliniak.github.io/Word-typing-counter/",
     src: "https://github.com/soliniak/Word-typing-counter",
     img: "img/project_icons/typer.jpg",
     webp: "img/project_icons/typer.webp",

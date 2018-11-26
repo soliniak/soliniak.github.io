@@ -20,7 +20,16 @@
 
 .contact {
   left: calc(200vw - 100vw);
-  height: 90vh; }
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 @media (min-width: 1024px) {
   .about, .portfolio, .contact {
@@ -154,7 +163,7 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  font-family: Montserrat;
+  font-family: Montserrat, Arial, sans-serif;
   font-weight: 300;
   position: relative;
   -webkit-transition: background .1s ease;
@@ -284,6 +293,18 @@
 .btn--live {
   margin-right: 5px; }
 
+.ps-icon {
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  background-image: url("../../img/ps-icon.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-size: cover;
+  background-position: center; }
+  .ps-icon:hover {
+    background-image: url("../../img/ps-icon--blue.png"); }
+
 @media (max-width: 350px) {
   .card__top {
     padding: 0; } }
@@ -323,7 +344,7 @@
     font-size: 12px; }
   .card__text {
     font-size: 12px;
-    margin: 1rem; }
+    margin: 1rem 1rem auto; }
   .card__header {
     margin: .5rem 1rem 0 1rem;
     padding-bottom: .6rem; }
@@ -337,17 +358,7 @@
     -ms-flex-order: 100;
     order: 100;
     -ms-flex-item-align: self-start;
-    align-self: self-start; }
-  .ps-icon {
-    height: 16px;
-    width: 16px;
-    display: inline-block;
-    background-image: url("../../img/ps-icon.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; }
-    .ps-icon:hover {
-      background-image: url("../../img/ps-icon--blue.png"); } }
+    align-self: self-start; } }
 
 @media (min-width: 1024px) {
   .portfolio {
@@ -454,10 +465,8 @@
   opacity: .5; }
 
 .contact-me {
-  text-align: center; }
-  .contact-me__container {
-    position: relative;
-    top: 230px; }
+  text-align: center;
+  display: none; }
   .contact-me__data {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -468,17 +477,6 @@
     flex-direction: column;
     padding: 1rem; }
 
-@media (min-width: 375px) {
-  .contact-me__container {
-    top: 320px; }
-  .video__container {
-    height: 430px; } }
-
-@media (min-width: 414px) {
-  .contact-me__container {
-    top: 330px;
-    padding-bottom: 1rem; } }
-
 @media (min-width: 768px) {
   .contact-me__data {
     -webkit-box-orient: horizontal;
@@ -488,14 +486,7 @@
     -ms-flex-pack: distribute;
     justify-content: space-around; }
   .contact__item:last-child {
-    margin-top: 0; }
-  .contact-me__container {
-    padding-bottom: 0;
-    padding: 1rem; } }
-
-@media (min-width: 1366px) {
-  .contact-me__container {
-    top: 420px; } }
+    margin-top: 0; } }
 
 * {
   -webkit-box-sizing: border-box;
@@ -505,9 +496,43 @@
   -webkit-box-sizing: inherit;
   box-sizing: inherit; }
 
+/* latin-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Montserrat Light"), local("Montserrat-Light"), url(https://fonts.gstatic.com/s/montserrat/v12/JTURjIg1_i6t8kCHKm45_cJD3gfD_u50.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  font-display: fallback; }
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url(https://fonts.gstatic.com/s/montserrat/v12/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  font-display: fallback; }
+
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Montserrat Light"), local("Montserrat-Light"), url(https://fonts.gstatic.com/s/montserrat/v12/JTURjIg1_i6t8kCHKm45_cJD3gnD_g.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-display: fallback; }
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url(https://fonts.gstatic.com/s/montserrat/v12/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-display: fallback; }
+
 a {
   color: #5d5d5d;
-  font-family: Montserrat; }
+  font-family: Montserrat, Arial, sans-serif; }
 
 a:hover {
   color: #0072ea;

@@ -6,27 +6,20 @@
     <link rel="apple-touch-icon-precomposed" href="img/favicon-180x180.png" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="Cache-control" content="public" max-age="604800" />
     <meta property="og:title" content="Rafi's - Portfolio" />
     <meta
       property="og:description"
       content="Rafi, front-end z Piaseczna. Zobacz portfolio."
     />
     <meta property="og:type" content="Website" />
-    <!--
-      <meta property="og:url" content="https://soliniak.github.io/examples/zest/" />
-      <meta property="og:image" content="https://soliniak.github.io/examples/zest/img/zest-og.jpg" />
-    -->
+    <meta property="og:url" content="https://soliniak.github.io/" />
+    <meta
+      property="og:image"
+      content="https://soliniak.github.io/img/og-image.webp"
+    />
+
     <link rel="stylesheet" type="text/css" href="style/bundle/reset.css" />
     <link rel="stylesheet" type="text/css" href="style/bundle/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:400"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:300,400"
-      rel="stylesheet"
-    />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
@@ -124,7 +117,7 @@
           <!--
             Front End jest moją pasją już od dawna, a każdą wolną chwilę staram się spędzać na dokształcaniu się. Moje obecne stanowisko nie pozwala na poświęcenie się temu w tak dużym wymiarze w jakim bym chciał. W związku z tym, moim obecnym celem jest zajmowanie się programowaniem w pełni zawodowo, aby móc na rozwój poświęcać jeszcze więcej czasu niż dotychczas i stawać się coraz lepszym w tym co robię.
           -->
-          <p>W paru słowach o mnie:</p>
+          <h2>W paru słowach o mnie:</h2>
           <p>
             Mieszkam w Piasecznie, programowaniem interesuję się od dawna, a
             swój poziom w web devie oceniam na solidnego juniora. Na chwilę
@@ -139,7 +132,7 @@
           </p>
         </div>
         <ul class="card about__text">
-          Używam:
+          <span> Używam: </span>
           <li class="what-i-use">BEM</li>
           <li class="what-i-use">CSS3</li>
           <li class="what-i-use">Chrome DevTools</li>
@@ -154,7 +147,7 @@
           <li class="what-i-use">REACT</li>
           <li class="what-i-use">RWD</li>
           <li class="what-i-use">SASS</li>
-          <p class="space">W mniejszym stopniu:</p>
+          <span class="space">W mniejszym stopniu:</span>
 
           <li class="what-i-use">JQuery</li>
           <li class="what-i-use">Node.js</li>
@@ -181,13 +174,13 @@
       </section>
       <section class="contact" id="contact">
         <div class="video__container">
-          <video autoplay play loop class="contact__video">
+          <video autoplay muted loop class="contact__video">
             <source src="img/media/typing.mp4" type="video/mp4" />
             <source src="img/media/typing.ogg" type="video/ogg" />
           </video>
         </div>
         <div class="card about__text contact-me__container">
-          <!-- <p class="contact-me">Zapraszam do kontaktu</p> -->
+          <h2 class="contact-me">Zapraszam do kontaktu</h2>
           <div class="contact-me__data">
             <a
               href="mailto:soliniak@gmail.com"

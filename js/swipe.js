@@ -42,7 +42,7 @@ function move(e) {
     if (trackPosition > 1) trackPosition = 1;
     if (trackPosition < -1) trackPosition = -1;
 
-    moveSection(trackPosition, f);
+    moveSection(trackPosition, threshold);
     mouseDownPosition = null;
   }
 }
