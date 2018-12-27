@@ -1,23 +1,23 @@
 "use strict";
 const Projects = {
-  // translator: {
-  //   name: "translator",
-  //   live: "https://soliniak.github.io/Translator/",
-  //   src: "https://github.com/soliniak/Translator",
-  //   img: "img/project_icons/translator.jpg",
-  //   webp: "img/project_icons/translator.webp",
-  //   alt: "React App - Translator",
-  //   order: "5",
-  //   stack: {
-  //     html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
-  //     js: ["true", '<i class="fab fa-js icon--stack"></i>'],
-  //     gulp: ["true", '<i class="fab fa-gulp icon--stack"></i>'],
-  //     photoshop: ["true", '<i class="ps-icon icon--stack"></i>'],
-  //     npm: ["true", '<i class="fab fa-npm icon--stack"></i>'],
-  //     sass: ["true", '<i class="fab fa-sass icon--stack"></i>'],
-  //     react: ["true", '<i class="fab fa-react icon--stack"></i>']
-  //   }
-  // },
+  translator: {
+    name: "translator",
+    live: "https://soliniak.github.io/Translator/",
+    src: "https://github.com/soliniak/Translator",
+    img: "img/project_icons/translator.jpg",
+    webp: "img/project_icons/translator.webp",
+    alt: "App - Translator with React",
+    order: "5",
+    stack: {
+      html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
+      js: ["true", '<i class="fab fa-js icon--stack"></i>'],
+      gulp: ["true", '<i class="fab fa-gulp icon--stack"></i>'],
+      photoshop: ["true", '<i class="ps-icon icon--stack"></i>'],
+      npm: ["true", '<i class="fab fa-npm icon--stack"></i>'],
+      sass: ["true", '<i class="fab fa-sass icon--stack"></i>'],
+      react: ["true", '<i class="fab fa-react icon--stack"></i>']
+    }
+  },
   yoga: {
     name: "yoga",
     live: "https://soliniak.github.io/Yoga/",
