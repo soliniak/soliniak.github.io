@@ -274,11 +274,18 @@
   padding: 5px 5px 0 0;
 }
 
-.text__position,
 .text__name {
-  font-size: 12px !important; /* sorry */
+  font-size: 14px !important;
+}
+.text__position {
+  font-size: 12px; /* sorry */
 }
 
+@media (min-width: 414px) {
+  .text__name {
+    font-size: 16px !important;
+  }
+}
 .text__top {
   display: -webkit-box;
   display: -ms-flexbox;
