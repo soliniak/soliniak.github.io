@@ -275,15 +275,15 @@
 }
 
 .text__name {
-  font-size: 14px !important;
+  font-size: 14px !important; /* sorry */
 }
 .text__position {
-  font-size: 12px; /* sorry */
+  font-size: 12px;
 }
 
 @media (min-width: 414px) {
   .text__name {
-    font-size: 16px !important;
+    font-size: 16px !important; /* sorry */
   }
 }
 .text__top {

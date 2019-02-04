@@ -189,8 +189,10 @@ Object.entries(Projects).forEach(([project, projectValue]) => {
         <span>
           <a href="${
             projectValue.live
-          }" class="btn--square btn--live"> live </a>
-          <a href="${projectValue.src}" class="btn--square"> src </a>
+          }" class="btn--square btn--live" target="_blank" rel="noopener"> live </a>
+          <a href="${
+            projectValue.src
+          }" class="btn--square" target="_blank" rel="noopener"> src </a>
         </span>
     </div>
     <p class="card__text">
