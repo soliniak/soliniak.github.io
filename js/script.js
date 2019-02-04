@@ -6,7 +6,7 @@ const Projects = {
     src: "https://github.com/soliniak/Translator",
     img: "img/project_icons/translator.jpg",
     webp: "img/project_icons/translator.webp",
-    alt: "App with react",
+    alt: "App with React",
     order: "5",
     stack: {
       html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
@@ -109,7 +109,7 @@ const Projects = {
     }
   },
   weatherApp: {
-    name: "weather",
+    name: "weather check",
     live: "https://soliniak.github.io/Weather-App/",
     src: "https://github.com/soliniak/Weather-App",
     img: "img/project_icons/weather-app.jpg",
