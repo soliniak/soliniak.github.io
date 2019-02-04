@@ -9,13 +9,16 @@ const Projects = {
     alt: "App with React",
     order: "5",
     stack: {
-      html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
-      js: ["true", '<i class="fab fa-js icon--stack"></i>'],
-      gulp: ["true", '<i class="fab fa-gulp icon--stack"></i>'],
-      photoshop: ["true", '<i class="ps-icon icon--stack"></i>'],
-      npm: ["true", '<i class="fab fa-npm icon--stack"></i>'],
-      sass: ["true", '<i class="fab fa-sass icon--stack"></i>'],
-      react: ["true", '<i class="fab fa-react icon--stack"></i>']
+      html5: ["true", '<i class="fab fa-html5 icon--stack" title="HTML5"></i>'],
+      js: ["true", '<i class="fab fa-js icon--stack" title="JavaScript"></i>'],
+      gulp: ["true", '<i class="fab fa-gulp icon--stack" title="Gulp"></i>'],
+      photoshop: [
+        "true",
+        '<i class="ps-icon icon--stack" title="Photoshop"></i>'
+      ],
+      npm: ["true", '<i class="fab fa-npm icon--stack" title="NPM"></i>'],
+      sass: ["true", '<i class="fab fa-sass icon--stack" title="Sass"></i>'],
+      react: ["true", '<i class="fab fa-react icon--stack" title="React"></i>']
     }
   },
   yoga: {
@@ -27,13 +30,16 @@ const Projects = {
     alt: "WWW - WebDev Challenge #16",
     order: "10",
     stack: {
-      html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
-      js: ["true", '<i class="fab fa-js icon--stack"></i>'],
-      gulp: ["true", '<i class="fab fa-gulp icon--stack"></i>'],
-      photoshop: ["true", '<i class="ps-icon icon--stack"></i>'],
-      npm: ["true", '<i class="fab fa-npm icon--stack"></i>'],
-      sass: ["true", '<i class="fab fa-sass icon--stack"></i>'],
-      react: ["false", '<i class="fab fa-react icon--stack"></i>']
+      html5: ["true", '<i class="fab fa-html5 icon--stack" title="HTML5"></i>'],
+      js: ["true", '<i class="fab fa-js icon--stack" title="JavaScript"></i>'],
+      gulp: ["true", '<i class="fab fa-gulp icon--stack" title="Gulp"></i>'],
+      photoshop: [
+        "true",
+        '<i class="ps-icon icon--stack" title="Photoshop"></i>'
+      ],
+      npm: ["true", '<i class="fab fa-npm icon--stack" title="NPM"></i>'],
+      sass: ["true", '<i class="fab fa-sass icon--stack" title="Sass"></i>'],
+      react: ["false", '<i class="fab fa-react icon--stack" title="React"></i>']
     }
   },
   zest: {
@@ -45,13 +51,16 @@ const Projects = {
     alt: "WWW - WebDev Challenge #12",
     order: "20",
     stack: {
-      html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
-      js: ["true", '<i class="fab fa-js icon--stack"></i>'],
-      gulp: ["true", '<i class="fab fa-gulp icon--stack"></i>'],
-      photoshop: ["true", '<i class="ps-icon icon--stack"></i>'],
-      npm: ["true", '<i class="fab fa-npm icon--stack"></i>'],
-      sass: ["true", '<i class="fab fa-sass icon--stack"></i>'],
-      react: ["false", '<i class="fab fa-react icon--stack"></i>']
+      html5: ["true", '<i class="fab fa-html5 icon--stack" title="HTML5"></i>'],
+      js: ["true", '<i class="fab fa-js icon--stack" title="JavaScript"></i>'],
+      gulp: ["true", '<i class="fab fa-gulp icon--stack" title="Gulp"></i>'],
+      photoshop: [
+        "true",
+        '<i class="ps-icon icon--stack" title="Photoshop"></i>'
+      ],
+      npm: ["true", '<i class="fab fa-npm icon--stack" title="NPM"></i>'],
+      sass: ["true", '<i class="fab fa-sass icon--stack" title="Sass"></i>'],
+      react: ["false", '<i class="fab fa-react icon--stack" title="React"></i>']
     }
   },
   mogo: {
@@ -63,13 +72,16 @@ const Projects = {
     alt: "WWW - WebDev Challenge #35",
     order: "30",
     stack: {
-      html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
-      js: ["true", '<i class="fab fa-js icon--stack"></i>'],
-      gulp: ["true", '<i class="fab fa-gulp icon--stack"></i>'],
-      photoshop: ["true", '<i class="ps-icon icon--stack"></i>'],
-      npm: ["true", '<i class="fab fa-npm icon--stack"></i>'],
-      sass: ["true", '<i class="fab fa-sass icon--stack"></i>'],
-      react: ["false", '<i class="fab fa-react icon--stack"></i>']
+      html5: ["true", '<i class="fab fa-html5 icon--stack" title="HTML5"></i>'],
+      js: ["true", '<i class="fab fa-js icon--stack" title="JavaScript"></i>'],
+      gulp: ["true", '<i class="fab fa-gulp icon--stack" title="Gulp"></i>'],
+      photoshop: [
+        "true",
+        '<i class="ps-icon icon--stack" title="Photoshop"></i>'
+      ],
+      npm: ["true", '<i class="fab fa-npm icon--stack" title="NPM"></i>'],
+      sass: ["true", '<i class="fab fa-sass icon--stack" title="Sass"></i>'],
+      react: ["false", '<i class="fab fa-react icon--stack" title="React"></i>']
     }
   },
   lorem: {
@@ -81,13 +93,16 @@ const Projects = {
     alt: "WWW - Landing Page",
     order: "40",
     stack: {
-      html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
-      js: ["true", '<i class="fab fa-js icon--stack"></i>'],
-      gulp: ["true", '<i class="fab fa-gulp icon--stack"></i>'],
-      photoshop: ["false", '<i class="ps-icon icon--stack"></i>'],
-      npm: ["true", '<i class="fab fa-npm icon--stack"></i>'],
-      sass: ["true", '<i class="fab fa-sass icon--stack"></i>'],
-      react: ["false", '<i class="fab fa-react icon--stack"></i>']
+      html5: ["true", '<i class="fab fa-html5 icon--stack" title="HTML5"></i>'],
+      js: ["true", '<i class="fab fa-js icon--stack" title="JavaScript"></i>'],
+      gulp: ["true", '<i class="fab fa-gulp icon--stack" title="Gulp"></i>'],
+      photoshop: [
+        "false",
+        '<i class="ps-icon icon--stack" title="Photoshop"></i>'
+      ],
+      npm: ["true", '<i class="fab fa-npm icon--stack" title="NPM"></i>'],
+      sass: ["true", '<i class="fab fa-sass icon--stack" title="Sass"></i>'],
+      react: ["false", '<i class="fab fa-react icon--stack" title="React"></i>']
     }
   },
   typer: {
@@ -99,13 +114,16 @@ const Projects = {
     alt: "APP - word typing counter",
     order: "25",
     stack: {
-      html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
-      js: ["true", '<i class="fab fa-js icon--stack"></i>'],
-      gulp: ["true", '<i class="fab fa-gulp icon--stack"></i>'],
-      photoshop: ["false", '<i class="ps-icon icon--stack"></i>'],
-      npm: ["true", '<i class="fab fa-npm icon--stack"></i>'],
-      sass: ["true", '<i class="fab fa-sass icon--stack"></i>'],
-      react: ["false", '<i class="fab fa-react icon--stack"></i>']
+      html5: ["true", '<i class="fab fa-html5 icon--stack" title="HTML5"></i>'],
+      js: ["true", '<i class="fab fa-js icon--stack" title="JavaScript"></i>'],
+      gulp: ["true", '<i class="fab fa-gulp icon--stack" title="Gulp"></i>'],
+      photoshop: [
+        "false",
+        '<i class="ps-icon icon--stack" title="Photoshop"></i>'
+      ],
+      npm: ["true", '<i class="fab fa-npm icon--stack" title="NPM"></i>'],
+      sass: ["true", '<i class="fab fa-sass icon--stack" title="Sass"></i>'],
+      react: ["false", '<i class="fab fa-react icon--stack" title="React"></i>']
     }
   },
   weatherApp: {
@@ -117,13 +135,16 @@ const Projects = {
     alt: "App with React",
     order: "1",
     stack: {
-      html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
-      js: ["true", '<i class="fab fa-js icon--stack"></i>'],
-      gulp: ["true", '<i class="fab fa-gulp icon--stack"></i>'],
-      photoshop: ["true", '<i class="ps-icon icon--stack"></i>'],
-      npm: ["true", '<i class="fab fa-npm icon--stack"></i>'],
-      sass: ["true", '<i class="fab fa-sass icon--stack"></i>'],
-      react: ["true", '<i class="fab fa-react icon--stack"></i>']
+      html5: ["true", '<i class="fab fa-html5 icon--stack" title="HTML5"></i>'],
+      js: ["true", '<i class="fab fa-js icon--stack" title="JavaScript"></i>'],
+      gulp: ["true", '<i class="fab fa-gulp icon--stack" title="Gulp"></i>'],
+      photoshop: [
+        "true",
+        '<i class="ps-icon icon--stack" title="Photoshop"></i>'
+      ],
+      npm: ["true", '<i class="fab fa-npm icon--stack" title="NPM"></i>'],
+      sass: ["true", '<i class="fab fa-sass icon--stack" title="Sass"></i>'],
+      react: ["true", '<i class="fab fa-react icon--stack" title="React"></i>']
     }
   },
   tictactoe: {
@@ -135,13 +156,16 @@ const Projects = {
     alt: "Game - simple and funny",
     order: "50",
     stack: {
-      html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
-      js: ["true", '<i class="fab fa-js icon--stack"></i>'],
-      gulp: ["false", '<i class="fab fa-gulp icon--stack"></i>'],
-      photoshop: ["false", '<i class="ps-icon icon--stack"></i>'],
-      npm: ["false", '<i class="fab fa-npm icon--stack"></i>'],
-      sass: ["true", '<i class="fab fa-sass icon--stack"></i>'],
-      react: ["false", '<i class="fab fa-react icon--stack"></i>']
+      html5: ["true", '<i class="fab fa-html5 icon--stack" title="HTML5"></i>'],
+      js: ["true", '<i class="fab fa-js icon--stack" title="JavaScript"></i>'],
+      gulp: ["false", '<i class="fab fa-gulp icon--stack" title="Gulp"></i>'],
+      photoshop: [
+        "false",
+        '<i class="ps-icon icon--stack" title="Photoshop"></i>'
+      ],
+      npm: ["false", '<i class="fab fa-npm icon--stack" title="NPM"></i>'],
+      sass: ["true", '<i class="fab fa-sass icon--stack" title="Sass"></i>'],
+      react: ["false", '<i class="fab fa-react icon--stack" title="React"></i>']
     }
   }
 };
@@ -213,12 +237,12 @@ const btnContact = document.querySelector(".btn--contact"),
   portfolioSection = 0,
   contactSection = 100;
 
-btnGotoContact.addEventListener("click", () => {
-  showActiveSectionHideRest(contactSection);
-  adjustWindowHeightTo(contact);
-  btnContact.classList.add("link--active");
-  window.innerHeight = "400px";
-});
+// btnGotoContact.addEventListener("click", () => {
+//   showActiveSectionHideRest(contactSection);
+//   adjustWindowHeightTo(contact);
+//   btnContact.classList.add("link--active");
+//   window.innerHeight = "400px";
+// });
 // navigate thgrough sections and set aria-hidden
 menu.addEventListener("click", function(e) {
   if (e.target) {

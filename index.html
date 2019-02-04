@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="pl-PL" id="html">
   <head>
-    <!--[if IE]><link rel="shortcut icon" href="img/favicon.ico"/><![endif]-->
-    <link rel="icon" href="img/favicon-196x196.png" />
-    <link rel="apple-touch-icon-precomposed" href="img/favicon-180x180.png" />
     <meta charset="utf-8" />
+    <title>Rafał Soliński - Portfolio</title>
+    <meta
+      name="description"
+      content="Rafał Soliński - front-end developer z Piaseczna. Piszę strony www, aplikacje, wtyczki, wektoryzuję grafiki, PSD -> HTML."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta property="og:title" content="Rafał Soliński - Portfolio" />
     <meta
@@ -17,6 +19,9 @@
       property="og:image"
       content="https://soliniak.github.io/img/og-image.webp"
     />
+    <!--[if IE]><link rel="shortcut icon" href="img/favicon.ico"/><![endif]-->
+    <link rel="icon" href="img/favicon-196x196.png" />
+    <link rel="apple-touch-icon-precomposed" href="img/favicon-180x180.png" />
     <link rel="stylesheet" type="text/css" href="style/bundle/reset.css" />
     <link rel="stylesheet" type="text/css" href="style/bundle/style.css" />
     <link
@@ -25,9 +30,7 @@
       integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
       crossorigin="anonymous"
     />
-    <title>Rafał Soliński - Portfolio</title>
   </head>
-
   <body id="body">
     <header class="header">
       <nav class="nav">
@@ -52,27 +55,33 @@
               class="menu__link"
               href="https://github.com/soliniak"
               target="_blank"
+              rel="noopener"
             >
-              <i class="fab fa-github fa--icon"></i> Github</a
-            >
+              <i class="fab fa-github fa--icon"></i> Github
+              <i class="fas fa-external-link-alt fa--external"></i
+            ></a>
           </li>
           <li class="menu__item" data-mobile="false" aria-hidden="true">
             <a
               class="menu__link"
               href="https://codepen.io/Rafi-R"
               target="_blank"
+              rel="noopener"
             >
-              <i class="fab fa-codepen fa--icon"></i> Codepen</a
-            >
+              <i class="fab fa-codepen fa--icon"></i> Codepen
+              <i class="fas fa-external-link-alt fa--external"></i
+            ></a>
           </li>
           <li class="menu__item" data-mobile="false" aria-hidden="true">
             <a
               class="menu__link"
               href="https://discordapp.com/"
               target="_blank"
+              rel="noopener"
             >
-              <i class="fab fa-discord fa--icon"></i> Rafi#0622</a
-            >
+              <i class="fab fa-discord fa--icon"></i> Rafi#0622
+              <i class="fas fa-external-link-alt fa--external"></i
+            ></a>
           </li>
         </ul>
       </nav>
@@ -81,18 +90,18 @@
     <main class="main" id="main">
       <article class="card card__top">
         <div class="card__about">
-          <h1 class="card__header card__title card__top-title">
+          <h1 class="card__header card__title card__top-title text__name">
             Rafał Soliński
           </h1>
 
-          <div class="card__text text__top">
+          <div class="card__text text__top text__position">
             <div>
               <p>Junior Front-End Developer</p>
               <a href="mailto:soliniak@gmail.com" class="link--blue">
                 soliniak@gmail.com
               </a>
             </div>
-            <a href="#" class="btn--goto-contact btn--square">kontakt</a>
+            <!-- <a href="#" class="btn--goto-contact btn--square">kontakt</a> -->
           </div>
         </div>
         <picture class="image__container">
@@ -110,18 +119,21 @@
       </article>
       <section class="about" id="about">
         <div class="card about__skillset">
-          <i class="fab fa-html5 icon--stack"></i>
-          <i class="fab fa-css3-alt icon--stack"></i>
-          <i class="fab fa-sass icon--stack"></i>
-          <i class="fab fa-js icon--stack"></i>
-          <i class="fab fa-npm icon--stack"></i>
-          <i class="fab fa-gulp icon--stack"></i>
-          <i class="fab fa-react icon--stack"></i>
-          <i class="fab fa-node icon--stack"></i>
-          <i class="fab fa-github icon--stack"></i>
-          <i class="fab fa-google icon--stack"></i>
-          <i class="fab fa-stack-overflow icon--stack"></i>
-          <i class="fab fa-discord icon--stack"></i>
+          <i class="fab fa-html5 icon--stack" title="HTML5"></i>
+          <i class="fab fa-css3-alt icon--stack" title="CSS3"></i>
+          <i class="fab fa-sass icon--stack" title="Sass"></i>
+          <i class="fab fa-js icon--stack" title="JavaScript"></i>
+          <i class="fab fa-npm icon--stack" title="NPM"></i>
+          <i class="fab fa-gulp icon--stack" title="Gulp"></i>
+          <i class="fab fa-react icon--stack" title="React"></i>
+          <i class="fab fa-node icon--stack" title="Node JS"></i>
+          <i class="fab fa-github icon--stack" title="Github"></i>
+          <i class="fab fa-google icon--stack" title="Google"></i>
+          <i
+            class="fab fa-stack-overflow icon--stack"
+            title="Stackoverflow"
+          ></i>
+          <i class="fab fa-discord icon--stack" title="Discord"></i>
         </div>
         <div class="card about__text">
           <h2>W paru słowach o mnie:</h2>
@@ -168,6 +180,8 @@
             href="https://github.com/soliniak"
             target="_blank"
             class="btn--square"
+            target="_blank"
+            rel="noopener"
           >
             <i class="fab fa-github"></i> GitHub
           </a>
@@ -175,6 +189,8 @@
             href="https://codepen.io/Rafi-R"
             target="_blank"
             class="btn--square"
+            target="_blank"
+            rel="noopener"
           >
             <i class="fab fa-codepen"></i> CodePen
           </a>
