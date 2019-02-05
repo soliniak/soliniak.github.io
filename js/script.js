@@ -127,7 +127,7 @@ const Projects = {
     }
   },
   weatherApp: {
-    name: "weather check",
+    name: "weather",
     live: "https://soliniak.github.io/Weather-App/",
     src: "https://github.com/soliniak/Weather-App",
     img: "img/project_icons/weather-app.jpg",
