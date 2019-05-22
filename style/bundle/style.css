@@ -239,6 +239,9 @@
   border-radius: 0;
   padding: 1px;
 }
+.card__top .card__about {
+  margin-left: 10px;
+}
 .card__header {
   display: -webkit-box;
   display: -ms-flexbox;
