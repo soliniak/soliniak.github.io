@@ -21,6 +21,27 @@ const Projects = {
       react: ["true", '<i class="fab fa-react icon--stack" title="React"></i>']
     }
   },
+  winds: {
+    name: "winds",
+    live: "https://codepen.io/Rafi-R/full/WBjPQM",
+    src: "https://codepen.io/Rafi-R/pen/WBjPQM",
+    img: "img/project_icons/sailwinds.jpg",
+    webp: "img/project_icons/sailwinds.webp",
+    alt: "Learn to distinguish the winds",
+    order: "20",
+    stack: {
+      html5: ["true", '<i class="fab fa-html5 icon--stack" title="HTML5"></i>'],
+      js: ["true", '<i class="fab fa-js icon--stack" title="JavaScript"></i>'],
+      gulp: ["false", '<i class="fab fa-gulp icon--stack" title="Gulp"></i>'],
+      photoshop: [
+        "false",
+        '<i class="ps-icon icon--stack" title="Photoshop"></i>'
+      ],
+      npm: ["false", '<i class="fab fa-npm icon--stack" title="NPM"></i>'],
+      sass: ["true", '<i class="fab fa-sass icon--stack" title="Sass"></i>'],
+      react: ["false", '<i class="fab fa-react icon--stack" title="React"></i>']
+    }
+  },
   yoga: {
     name: "yoga",
     live: "https://soliniak.github.io/Yoga/",
