@@ -235,6 +235,10 @@
   width: 100px;
   border-radius: 5px 0 0 5px;
 }
+.card__top .card__image {
+  border-radius: 0;
+  padding: 1px;
+}
 .card__header {
   display: -webkit-box;
   display: -ms-flexbox;
