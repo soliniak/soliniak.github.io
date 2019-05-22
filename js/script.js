@@ -27,7 +27,7 @@ const Projects = {
     src: "https://codepen.io/Rafi-R/pen/WBjPQM",
     img: "img/project_icons/sailwinds.jpg",
     webp: "img/project_icons/sailwinds.webp",
-    alt: "Learn to distinguish the winds",
+    alt: "Learn to distinguish sea winds",
     order: "20",
     stack: {
       html5: ["true", '<i class="fab fa-html5 icon--stack" title="HTML5"></i>'],
