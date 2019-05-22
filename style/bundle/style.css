@@ -237,7 +237,7 @@
 }
 .card__top .card__image {
   border-radius: 0;
-  padding: 1px 0;
+  padding: 1px 0 1px 1px;
 }
 .card__top .card__about {
   margin-left: 10px;
