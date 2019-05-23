@@ -23,7 +23,7 @@ const Projects = {
   },
   winds: {
     name: "winds",
-    live: "https://codepen.io/Rafi-R/full/WBjPQM",
+    live: "https://s.codepen.io/Rafi-R/debug/WBjPQM/XxrVwagKwOpA",
     src: "https://codepen.io/Rafi-R/pen/WBjPQM",
     img: "img/project_icons/sailwinds.jpg",
     webp: "img/project_icons/sailwinds.webp",
