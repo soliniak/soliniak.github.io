@@ -23,7 +23,7 @@ const Projects = {
   },
   winds: {
     name: "winds",
-    live: "https://s.codepen.io/Rafi-R/debug/WBjPQM/XxrVwagKwOpA",
+    live: "https://codepen.io/Rafi-R/full/WBjPQM",
     src: "https://codepen.io/Rafi-R/pen/WBjPQM",
     img: "img/project_icons/sailwinds.jpg",
     webp: "img/project_icons/sailwinds.webp",
@@ -170,7 +170,7 @@ const Projects = {
   },
   tictactoe: {
     name: "TicTacToe",
-    live: "https://s.codepen.io/Rafi-R/debug/NjOwGV/YvAgOnRKbPYA",
+    live: "https://codepen.io/Rafi-R/full/NjOwGV",
     src: "https://codepen.io/Rafi-R/pen/NjOwGV",
     img: "img/project_icons/tictactoe.jpg",
     webp: "img/project_icons/tictactoe.webp",
