@@ -150,7 +150,7 @@ const Projects = {
   },
   tictactoe: {
     name: "TicTacToe",
-    live: "https://codepen.io/Rafi-R/full/NjOwGV",
+    live: "https://s.codepen.io/Rafi-R/debug/NjOwGV/YvAgOnRKbPYA",
     src: "https://codepen.io/Rafi-R/pen/NjOwGV",
     img: "img/project_icons/tictactoe.jpg",
     webp: "img/project_icons/tictactoe.webp",
