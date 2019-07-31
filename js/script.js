@@ -1,6 +1,27 @@
 "use strict";
 
 const Projects = {
+    translator: {
+    name: "translator",
+    live: "https://soliniak.github.io/Translator/",
+    src: "https://github.com/soliniak/Translator",
+    img: "img/project_icons/translator.jpg",
+    webp: "img/project_icons/translator.webp",
+    alt: "App with React",
+    order: "5",
+    stack: {
+      html5: ["true", '<i class="fab fa-html5 icon--stack" title="HTML5"></i>'],
+      js: ["true", '<i class="fab fa-js icon--stack" title="JavaScript"></i>'],
+      gulp: ["true", '<i class="fab fa-gulp icon--stack" title="Gulp"></i>'],
+      photoshop: [
+        "true",
+        '<i class="ps-icon icon--stack" title="Photoshop"></i>'
+      ],
+      npm: ["true", '<i class="fab fa-npm icon--stack" title="NPM"></i>'],
+      sass: ["true", '<i class="fab fa-sass icon--stack" title="Sass"></i>'],
+      react: ["true", '<i class="fab fa-react icon--stack" title="React"></i>']
+    }
+  },
   yoga: {
     name: "yoga",
     live: "https://soliniak.github.io/Yoga/",
@@ -33,6 +54,24 @@ const Projects = {
       gulp: ["true", '<i class="fab fa-gulp icon--stack"></i>'],
       photoshop: ["true", '<i class="ps-icon icon--stack"></i>'],
       npm: ["true", '<i class="fab fa-npm icon--stack"></i>'],
+      sass: ["true", '<i class="fab fa-sass icon--stack"></i>'],
+      react: ["false", '<i class="fab fa-react icon--stack"></i>']
+    }
+  },
+  tableFiltering: {
+    name: "table filtering",
+    live: "https://soliniak.github.io/table_filtering/",
+    src: "https://github.com/soliniak/table_filtering",
+    img: "img/project_icons/tablefiltering.jpg",
+    webp: "img/project_icons/tablefiltering.webp",
+    alt: "Data filtering project",
+    order: "32",
+    stack: {
+      html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
+      js: ["true", '<i class="fab fa-js icon--stack"></i>'],
+      gulp: ["false", '<i class="fab fa-gulp icon--stack"></i>'],
+      photoshop: ["false", '<i class="ps-icon icon--stack"></i>'],
+      npm: ["false", '<i class="fab fa-npm icon--stack"></i>'],
       sass: ["true", '<i class="fab fa-sass icon--stack"></i>'],
       react: ["false", '<i class="fab fa-react icon--stack"></i>']
     }
