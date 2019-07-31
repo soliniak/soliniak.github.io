@@ -1,7 +1,7 @@
 "use strict";
 
 const Projects = {
-    translator: {
+  translator: {
     name: "translator",
     live: "https://soliniak.github.io/Translator/",
     src: "https://github.com/soliniak/Translator",
@@ -187,8 +187,8 @@ Object.entries(Projects).forEach(([project, projectValue]) => {
         <span>
           <a href="${
             projectValue.live
-          }" class="btn--square btn--live"> live </a>
-          <a href="${projectValue.src}" class="btn--square"> src </a>
+          }" target="_blank" class="btn--square btn--live"> live </a>
+          <a href="${projectValue.src}" target="_blank" class="btn--square"> src </a>
         </span>
     </div>
     <p class="card__text">
