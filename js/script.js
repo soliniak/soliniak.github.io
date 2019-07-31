@@ -1,47 +1,6 @@
 "use strict";
+
 const Projects = {
-  translator: {
-    name: "translator",
-    live: "https://soliniak.github.io/Translator/",
-    src: "https://github.com/soliniak/Translator",
-    img: "img/project_icons/translator.jpg",
-    webp: "img/project_icons/translator.webp",
-    alt: "App with React",
-    order: "5",
-    stack: {
-      html5: ["true", '<i class="fab fa-html5 icon--stack" title="HTML5"></i>'],
-      js: ["true", '<i class="fab fa-js icon--stack" title="JavaScript"></i>'],
-      gulp: ["true", '<i class="fab fa-gulp icon--stack" title="Gulp"></i>'],
-      photoshop: [
-        "true",
-        '<i class="ps-icon icon--stack" title="Photoshop"></i>'
-      ],
-      npm: ["true", '<i class="fab fa-npm icon--stack" title="NPM"></i>'],
-      sass: ["true", '<i class="fab fa-sass icon--stack" title="Sass"></i>'],
-      react: ["true", '<i class="fab fa-react icon--stack" title="React"></i>']
-    }
-  },
-  winds: {
-    name: "winds",
-    live: "https://codepen.io/Rafi-R/full/WBjPQM",
-    src: "https://codepen.io/Rafi-R/pen/WBjPQM",
-    img: "img/project_icons/sailwinds.jpg",
-    webp: "img/project_icons/sailwinds.webp",
-    alt: "Learn to distinguish sea winds",
-    order: "20",
-    stack: {
-      html5: ["true", '<i class="fab fa-html5 icon--stack" title="HTML5"></i>'],
-      js: ["true", '<i class="fab fa-js icon--stack" title="JavaScript"></i>'],
-      gulp: ["false", '<i class="fab fa-gulp icon--stack" title="Gulp"></i>'],
-      photoshop: [
-        "false",
-        '<i class="ps-icon icon--stack" title="Photoshop"></i>'
-      ],
-      npm: ["false", '<i class="fab fa-npm icon--stack" title="NPM"></i>'],
-      sass: ["true", '<i class="fab fa-sass icon--stack" title="Sass"></i>'],
-      react: ["false", '<i class="fab fa-react icon--stack" title="React"></i>']
-    }
-  },
   yoga: {
     name: "yoga",
     live: "https://soliniak.github.io/Yoga/",
@@ -51,16 +10,13 @@ const Projects = {
     alt: "WWW - WebDev Challenge #16",
     order: "10",
     stack: {
-      html5: ["true", '<i class="fab fa-html5 icon--stack" title="HTML5"></i>'],
-      js: ["true", '<i class="fab fa-js icon--stack" title="JavaScript"></i>'],
-      gulp: ["true", '<i class="fab fa-gulp icon--stack" title="Gulp"></i>'],
-      photoshop: [
-        "true",
-        '<i class="ps-icon icon--stack" title="Photoshop"></i>'
-      ],
-      npm: ["true", '<i class="fab fa-npm icon--stack" title="NPM"></i>'],
-      sass: ["true", '<i class="fab fa-sass icon--stack" title="Sass"></i>'],
-      react: ["false", '<i class="fab fa-react icon--stack" title="React"></i>']
+      html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
+      js: ["true", '<i class="fab fa-js icon--stack"></i>'],
+      gulp: ["true", '<i class="fab fa-gulp icon--stack"></i>'],
+      photoshop: ["true", '<i class="ps-icon icon--stack"></i>'],
+      npm: ["true", '<i class="fab fa-npm icon--stack"></i>'],
+      sass: ["true", '<i class="fab fa-sass icon--stack"></i>'],
+      react: ["false", '<i class="fab fa-react icon--stack"></i>']
     }
   },
   zest: {
@@ -72,16 +28,13 @@ const Projects = {
     alt: "WWW - WebDev Challenge #12",
     order: "20",
     stack: {
-      html5: ["true", '<i class="fab fa-html5 icon--stack" title="HTML5"></i>'],
-      js: ["true", '<i class="fab fa-js icon--stack" title="JavaScript"></i>'],
-      gulp: ["true", '<i class="fab fa-gulp icon--stack" title="Gulp"></i>'],
-      photoshop: [
-        "true",
-        '<i class="ps-icon icon--stack" title="Photoshop"></i>'
-      ],
-      npm: ["true", '<i class="fab fa-npm icon--stack" title="NPM"></i>'],
-      sass: ["true", '<i class="fab fa-sass icon--stack" title="Sass"></i>'],
-      react: ["false", '<i class="fab fa-react icon--stack" title="React"></i>']
+      html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
+      js: ["true", '<i class="fab fa-js icon--stack"></i>'],
+      gulp: ["true", '<i class="fab fa-gulp icon--stack"></i>'],
+      photoshop: ["true", '<i class="ps-icon icon--stack"></i>'],
+      npm: ["true", '<i class="fab fa-npm icon--stack"></i>'],
+      sass: ["true", '<i class="fab fa-sass icon--stack"></i>'],
+      react: ["false", '<i class="fab fa-react icon--stack"></i>']
     }
   },
   mogo: {
@@ -93,16 +46,13 @@ const Projects = {
     alt: "WWW - WebDev Challenge #35",
     order: "30",
     stack: {
-      html5: ["true", '<i class="fab fa-html5 icon--stack" title="HTML5"></i>'],
-      js: ["true", '<i class="fab fa-js icon--stack" title="JavaScript"></i>'],
-      gulp: ["true", '<i class="fab fa-gulp icon--stack" title="Gulp"></i>'],
-      photoshop: [
-        "true",
-        '<i class="ps-icon icon--stack" title="Photoshop"></i>'
-      ],
-      npm: ["true", '<i class="fab fa-npm icon--stack" title="NPM"></i>'],
-      sass: ["true", '<i class="fab fa-sass icon--stack" title="Sass"></i>'],
-      react: ["false", '<i class="fab fa-react icon--stack" title="React"></i>']
+      html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
+      js: ["true", '<i class="fab fa-js icon--stack"></i>'],
+      gulp: ["true", '<i class="fab fa-gulp icon--stack"></i>'],
+      photoshop: ["true", '<i class="ps-icon icon--stack"></i>'],
+      npm: ["true", '<i class="fab fa-npm icon--stack"></i>'],
+      sass: ["true", '<i class="fab fa-sass icon--stack"></i>'],
+      react: ["false", '<i class="fab fa-react icon--stack"></i>']
     }
   },
   lorem: {
@@ -114,16 +64,13 @@ const Projects = {
     alt: "WWW - Landing Page",
     order: "40",
     stack: {
-      html5: ["true", '<i class="fab fa-html5 icon--stack" title="HTML5"></i>'],
-      js: ["true", '<i class="fab fa-js icon--stack" title="JavaScript"></i>'],
-      gulp: ["true", '<i class="fab fa-gulp icon--stack" title="Gulp"></i>'],
-      photoshop: [
-        "false",
-        '<i class="ps-icon icon--stack" title="Photoshop"></i>'
-      ],
-      npm: ["true", '<i class="fab fa-npm icon--stack" title="NPM"></i>'],
-      sass: ["true", '<i class="fab fa-sass icon--stack" title="Sass"></i>'],
-      react: ["false", '<i class="fab fa-react icon--stack" title="React"></i>']
+      html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
+      js: ["true", '<i class="fab fa-js icon--stack"></i>'],
+      gulp: ["true", '<i class="fab fa-gulp icon--stack"></i>'],
+      photoshop: ["false", '<i class="ps-icon icon--stack"></i>'],
+      npm: ["true", '<i class="fab fa-npm icon--stack"></i>'],
+      sass: ["true", '<i class="fab fa-sass icon--stack"></i>'],
+      react: ["false", '<i class="fab fa-react icon--stack"></i>']
     }
   },
   typer: {
@@ -135,16 +82,13 @@ const Projects = {
     alt: "APP - word typing counter",
     order: "25",
     stack: {
-      html5: ["true", '<i class="fab fa-html5 icon--stack" title="HTML5"></i>'],
-      js: ["true", '<i class="fab fa-js icon--stack" title="JavaScript"></i>'],
-      gulp: ["true", '<i class="fab fa-gulp icon--stack" title="Gulp"></i>'],
-      photoshop: [
-        "false",
-        '<i class="ps-icon icon--stack" title="Photoshop"></i>'
-      ],
-      npm: ["true", '<i class="fab fa-npm icon--stack" title="NPM"></i>'],
-      sass: ["true", '<i class="fab fa-sass icon--stack" title="Sass"></i>'],
-      react: ["false", '<i class="fab fa-react icon--stack" title="React"></i>']
+      html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
+      js: ["true", '<i class="fab fa-js icon--stack"></i>'],
+      gulp: ["true", '<i class="fab fa-gulp icon--stack"></i>'],
+      photoshop: ["false", '<i class="ps-icon icon--stack"></i>'],
+      npm: ["true", '<i class="fab fa-npm icon--stack"></i>'],
+      sass: ["true", '<i class="fab fa-sass icon--stack"></i>'],
+      react: ["false", '<i class="fab fa-react icon--stack"></i>']
     }
   },
   weatherApp: {
@@ -153,19 +97,16 @@ const Projects = {
     src: "https://github.com/soliniak/Weather-App",
     img: "img/project_icons/weather-app.jpg",
     webp: "img/project_icons/weather-app.webp",
-    alt: "App with React",
+    alt: "APP - REST API Weather App",
     order: "1",
     stack: {
-      html5: ["true", '<i class="fab fa-html5 icon--stack" title="HTML5"></i>'],
-      js: ["true", '<i class="fab fa-js icon--stack" title="JavaScript"></i>'],
-      gulp: ["true", '<i class="fab fa-gulp icon--stack" title="Gulp"></i>'],
-      photoshop: [
-        "true",
-        '<i class="ps-icon icon--stack" title="Photoshop"></i>'
-      ],
-      npm: ["true", '<i class="fab fa-npm icon--stack" title="NPM"></i>'],
-      sass: ["true", '<i class="fab fa-sass icon--stack" title="Sass"></i>'],
-      react: ["true", '<i class="fab fa-react icon--stack" title="React"></i>']
+      html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
+      js: ["true", '<i class="fab fa-js icon--stack"></i>'],
+      gulp: ["true", '<i class="fab fa-gulp icon--stack"></i>'],
+      photoshop: ["true", '<i class="ps-icon icon--stack"></i>'],
+      npm: ["true", '<i class="fab fa-npm icon--stack"></i>'],
+      sass: ["true", '<i class="fab fa-sass icon--stack"></i>'],
+      react: ["true", '<i class="fab fa-react icon--stack"></i>']
     }
   },
   tictactoe: {
@@ -177,16 +118,13 @@ const Projects = {
     alt: "Game - simple and funny",
     order: "50",
     stack: {
-      html5: ["true", '<i class="fab fa-html5 icon--stack" title="HTML5"></i>'],
-      js: ["true", '<i class="fab fa-js icon--stack" title="JavaScript"></i>'],
-      gulp: ["false", '<i class="fab fa-gulp icon--stack" title="Gulp"></i>'],
-      photoshop: [
-        "false",
-        '<i class="ps-icon icon--stack" title="Photoshop"></i>'
-      ],
-      npm: ["false", '<i class="fab fa-npm icon--stack" title="NPM"></i>'],
-      sass: ["true", '<i class="fab fa-sass icon--stack" title="Sass"></i>'],
-      react: ["false", '<i class="fab fa-react icon--stack" title="React"></i>']
+      html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
+      js: ["true", '<i class="fab fa-js icon--stack"></i>'],
+      gulp: ["false", '<i class="fab fa-gulp icon--stack"></i>'],
+      photoshop: ["false", '<i class="ps-icon icon--stack"></i>'],
+      npm: ["false", '<i class="fab fa-npm icon--stack"></i>'],
+      sass: ["true", '<i class="fab fa-sass icon--stack"></i>'],
+      react: ["false", '<i class="fab fa-react icon--stack"></i>']
     }
   }
 };
@@ -210,10 +148,8 @@ Object.entries(Projects).forEach(([project, projectValue]) => {
         <span>
           <a href="${
             projectValue.live
-          }" class="btn--square btn--live" target="_blank" rel="noopener"> live </a>
-          <a href="${
-            projectValue.src
-          }" class="btn--square" target="_blank" rel="noopener"> src </a>
+          }" class="btn--square btn--live"> live </a>
+          <a href="${projectValue.src}" class="btn--square"> src </a>
         </span>
     </div>
     <p class="card__text">
@@ -260,12 +196,12 @@ const btnContact = document.querySelector(".btn--contact"),
   portfolioSection = 0,
   contactSection = 100;
 
-// btnGotoContact.addEventListener("click", () => {
-//   showActiveSectionHideRest(contactSection);
-//   adjustWindowHeightTo(contact);
-//   btnContact.classList.add("link--active");
-//   window.innerHeight = "400px";
-// });
+btnGotoContact.addEventListener("click", () => {
+  showActiveSectionHideRest(contactSection);
+  adjustWindowHeightTo(contact);
+  btnContact.classList.add("link--active");
+  window.innerHeight = "400px";
+});
 // navigate thgrough sections and set aria-hidden
 menu.addEventListener("click", function(e) {
   if (e.target) {
