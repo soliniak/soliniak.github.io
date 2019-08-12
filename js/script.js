@@ -1,7 +1,7 @@
 "use strict";
 
 const Projects = {
-    translator: {
+  translator: {
     name: "translator",
     live: "https://soliniak.github.io/Translator/",
     src: "https://github.com/soliniak/Translator",
@@ -20,6 +20,27 @@ const Projects = {
       npm: ["true", '<i class="fab fa-npm icon--stack" title="NPM"></i>'],
       sass: ["true", '<i class="fab fa-sass icon--stack" title="Sass"></i>'],
       react: ["true", '<i class="fab fa-react icon--stack" title="React"></i>']
+    }
+  },
+  winds: {
+    name: "winds",
+    live: "https://codepen.io/Rafi-R/full/WBjPQM",
+    src: "https://codepen.io/Rafi-R/pen/WBjPQM",
+    img: "img/project_icons/sailwinds.jpg",
+    webp: "img/project_icons/sailwinds.webp",
+    alt: "Learn to distinguish sea winds",
+    order: "20",
+    stack: {
+      html5: ["true", '<i class="fab fa-html5 icon--stack" title="HTML5"></i>'],
+      js: ["true", '<i class="fab fa-js icon--stack" title="JavaScript"></i>'],
+      gulp: ["false", '<i class="fab fa-gulp icon--stack" title="Gulp"></i>'],
+      photoshop: [
+        "false",
+        '<i class="ps-icon icon--stack" title="Photoshop"></i>'
+      ],
+      npm: ["false", '<i class="fab fa-npm icon--stack" title="NPM"></i>'],
+      sass: ["true", '<i class="fab fa-sass icon--stack" title="Sass"></i>'],
+      react: ["false", '<i class="fab fa-react icon--stack" title="React"></i>']
     }
   },
   yoga: {
@@ -186,8 +207,8 @@ Object.entries(Projects).forEach(([project, projectValue]) => {
         <h2 class="card__title">${projectValue.name}</h2>
         <span>
           <a href="${
-            projectValue.live
-          }" class="btn--square btn--live"> live </a>
+    projectValue.live
+    }" class="btn--square btn--live"> live </a>
           <a href="${projectValue.src}" class="btn--square"> src </a>
         </span>
     </div>
@@ -201,11 +222,11 @@ Object.entries(Projects).forEach(([project, projectValue]) => {
   </div>
   <picture class="image__container portfolio-image__container">
     <source type="image/webp" srcset="${
-      projectValue.webp
+    projectValue.webp
     }" class="card__image portfolio-image" />
     <img src="${projectValue.img}" alt="${
     projectValue.alt
-  }" class="card__image portfolio-image" />
+    }" class="card__image portfolio-image" />
   </picture>`;
 
   let article = document.createElement("article");
@@ -242,7 +263,7 @@ btnGotoContact.addEventListener("click", () => {
   window.innerHeight = "400px";
 });
 // navigate thgrough sections and set aria-hidden
-menu.addEventListener("click", function(e) {
+menu.addEventListener("click", function (e) {
   if (e.target) {
     let offset;
     const sectionTarget = e.target.getAttribute("href");
