@@ -1,5 +1,4 @@
 "use strict";
-
 const Projects = {
   translator: {
     name: "translator",
@@ -206,10 +205,8 @@ Object.entries(Projects).forEach(([project, projectValue]) => {
     <div class="card__header">
         <h2 class="card__title">${projectValue.name}</h2>
         <span>
-          <a href="${
-    projectValue.live
-    }" class="btn--square btn--live" target="_blank"> live </a>
-          <a href="${projectValue.src}" class="btn--square"  target="_blank"> src </a>
+          <a href="${projectValue.live}" class="btn--square btn--live" target="_blank" rel=”noopener”> live </a>
+          <a href="${projectValue.src}" class="btn--square" target="_blank" rel=”noopener”> src </a>
         </span>
     </div>
     <p class="card__text">
@@ -222,11 +219,11 @@ Object.entries(Projects).forEach(([project, projectValue]) => {
   </div>
   <picture class="image__container portfolio-image__container">
     <source type="image/webp" srcset="${
-    projectValue.webp
+      projectValue.webp
     }" class="card__image portfolio-image" />
     <img src="${projectValue.img}" alt="${
     projectValue.alt
-    }" class="card__image portfolio-image" />
+  }" class="card__image portfolio-image" />
   </picture>`;
 
   let article = document.createElement("article");
@@ -256,14 +253,14 @@ const btnContact = document.querySelector(".btn--contact"),
   portfolioSection = 0,
   contactSection = 100;
 
-btnGotoContact.addEventListener("click", () => {
-  showActiveSectionHideRest(contactSection);
-  adjustWindowHeightTo(contact);
-  btnContact.classList.add("link--active");
-  window.innerHeight = "400px";
-});
+// btnGotoContact.addEventListener("click", () => {
+//   showActiveSectionHideRest(contactSection);
+//   adjustWindowHeightTo(contact);
+//   btnContact.classList.add("link--active");
+//   window.innerHeight = "400px";
+// });
 // navigate thgrough sections and set aria-hidden
-menu.addEventListener("click", function (e) {
+menu.addEventListener("click", function(e) {
   if (e.target) {
     let offset;
     const sectionTarget = e.target.getAttribute("href");

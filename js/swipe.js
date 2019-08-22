@@ -35,9 +35,9 @@ function move(e) {
     btnContact2.addEventListener("click", () => {
       trackPosition = -1;
     });
-    btnGoContact.addEventListener("click", () => {
-      trackPosition = -1;
-    });
+    // btnGoContact.addEventListener("click", () => {
+    //   trackPosition = -1;
+    // });
 
     if (trackPosition > 1) trackPosition = 1;
     if (trackPosition < -1) trackPosition = -1;
