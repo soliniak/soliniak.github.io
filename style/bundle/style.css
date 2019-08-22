@@ -278,6 +278,9 @@
   text-transform: capitalize;
   margin: 4px 0;
 }
+.card__top-title {
+  font-size: 14px;
+}
 .card__text {
   line-height: 1rem;
   font-style: italic;
@@ -297,8 +300,7 @@
   padding: 5px 5px 0 0;
 }
 
-.text__position,
-.text__name {
+.text__position {
   font-size: 12px !important; /* sorry */
 }
 
