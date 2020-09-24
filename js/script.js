@@ -225,12 +225,12 @@ const Projects = {
   },
   valueadd: {
     name: "ValueAdd reqruitment task",
-    live: "https://soliniak.github.io/parleto-task/",
-    src: "https://github.com/soliniak/parleto-task",
-    img: "img/project_icons/parleto.jpg",
-    webp: "img/project_icons/parleto.webp",
+    live: "https://soliniak.github.io/valueadd/",
+    src: "https://github.com/soliniak/valueadd",
+    img: "img/project_icons/valueadd.jpg",
+    webp: "img/project_icons/valueadd.webp",
     alt: "Simple landing page",
-    order: "52",
+    order: "53",
     stack: {
       html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
       js: ["true", '<i class="fab fa-js icon--stack"></i>'],
