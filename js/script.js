@@ -192,7 +192,7 @@ const Projects = {
     src: "https://github.com/soliniak/ingeniousio",
     img: "img/project_icons/ingeniousio.jpg",
     webp: "img/project_icons/ingeniousio.webp",
-    alt: "Dashboard front-end project",
+    alt: "Rec. task - Dashboard front-end project",
     order: "51",
     stack: {
       html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
@@ -205,12 +205,12 @@ const Projects = {
     }
   },
   parleto: {
-    name: "Parleto Vue reqruitment task",
+    name: "Parleto",
     live: "https://soliniak.github.io/parleto-task/",
     src: "https://github.com/soliniak/parleto-task",
     img: "img/project_icons/parleto.jpg",
     webp: "img/project_icons/parleto.webp",
-    alt: "Filter by employees and they salaries",
+    alt: "Rec. task - Filter by employees and they salaries",
     order: "52",
     stack: {
       html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
@@ -224,12 +224,12 @@ const Projects = {
     }
   },
   valueadd: {
-    name: "ValueAdd reqruitment task",
+    name: "ValueAdd",
     live: "https://soliniak.github.io/valueadd/",
     src: "https://github.com/soliniak/valueadd",
     img: "img/project_icons/valueadd.jpg",
     webp: "img/project_icons/valueadd.webp",
-    alt: "Simple landing page",
+    alt: "Rec. task - Simple landing page",
     order: "53",
     stack: {
       html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
