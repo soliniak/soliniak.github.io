@@ -157,7 +157,7 @@ const Projects = {
     img: "img/project_icons/weather-app.jpg",
     webp: "img/project_icons/weather-app.webp",
     alt: "APP - REST API Weather App",
-    order: "1",
+    order: "15",
     stack: {
       html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
       js: ["true", '<i class="fab fa-js icon--stack"></i>'],
