@@ -202,25 +202,44 @@ const Projects = {
       npm: ["false", '<i class="fab fa-npm icon--stack"></i>'],
       sass: ["true", '<i class="fab fa-sass icon--stack"></i>'],
       react: ["false", '<i class="fab fa-react icon--stack"></i>']
-    },
-    parleto: {
-      name: "Parleto Vue reqruitment task",
-      live: "https://soliniak.github.io/parleto-task/",
-      src: "https://github.com/soliniak/parleto-task",
-      img: "img/project_icons/parleto.jpg",
-      webp: "img/project_icons/parleto.webp",
-      alt: "Filter by employees and they salaries",
-      order: "52",
-      stack: {
-        html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
-        js: ["true", '<i class="fab fa-js icon--stack"></i>'],
-        gulp: ["false", '<i class="fab fa-gulp icon--stack"></i>'],
-        photoshop: ["false", '<i class="ps-icon icon--stack"></i>'],
-        npm: ["false", '<i class="fab fa-npm icon--stack"></i>'],
-        sass: ["true", '<i class="fab fa-sass icon--stack"></i>'],
-        react: ["false", '<i class="fab fa-react icon--stack"></i>'],
-        vue: ["true", '<i class="fab fa-vuejs icon--stack"></i>']
-      }
+    }
+  },
+  parleto: {
+    name: "Parleto Vue reqruitment task",
+    live: "https://soliniak.github.io/parleto-task/",
+    src: "https://github.com/soliniak/parleto-task",
+    img: "img/project_icons/parleto.jpg",
+    webp: "img/project_icons/parleto.webp",
+    alt: "Filter by employees and they salaries",
+    order: "52",
+    stack: {
+      html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
+      js: ["true", '<i class="fab fa-js icon--stack"></i>'],
+      gulp: ["false", '<i class="fab fa-gulp icon--stack"></i>'],
+      photoshop: ["false", '<i class="ps-icon icon--stack"></i>'],
+      npm: ["false", '<i class="fab fa-npm icon--stack"></i>'],
+      sass: ["true", '<i class="fab fa-sass icon--stack"></i>'],
+      react: ["false", '<i class="fab fa-react icon--stack"></i>'],
+      vue: ["true", '<i class="fab fa-vuejs icon--stack"></i>']
+    }
+  },
+  valueadd: {
+    name: "ValueAdd reqruitment task",
+    live: "https://soliniak.github.io/parleto-task/",
+    src: "https://github.com/soliniak/parleto-task",
+    img: "img/project_icons/parleto.jpg",
+    webp: "img/project_icons/parleto.webp",
+    alt: "Simple landing page",
+    order: "52",
+    stack: {
+      html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
+      js: ["true", '<i class="fab fa-js icon--stack"></i>'],
+      gulp: ["false", '<i class="fab fa-gulp icon--stack"></i>'],
+      photoshop: ["false", '<i class="ps-icon icon--stack"></i>'],
+      npm: ["false", '<i class="fab fa-npm icon--stack"></i>'],
+      sass: ["true", '<i class="fab fa-sass icon--stack"></i>'],
+      react: ["false", '<i class="fab fa-react icon--stack"></i>'],
+      vue: ["false", '<i class="fab fa-vuejs icon--stack"></i>']
     }
   }
 };
