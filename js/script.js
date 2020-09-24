@@ -193,7 +193,7 @@ const Projects = {
     img: "img/project_icons/ingeniousio.jpg",
     webp: "img/project_icons/ingeniousio.webp",
     alt: "Rec. task - Dashboard front-end project",
-    order: "51",
+    order: "1",
     stack: {
       html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
       js: ["true", '<i class="fab fa-js icon--stack"></i>'],
@@ -211,7 +211,7 @@ const Projects = {
     img: "img/project_icons/parleto.jpg",
     webp: "img/project_icons/parleto.webp",
     alt: "Rec. task - Filter by employees and they salaries",
-    order: "52",
+    order: "2",
     stack: {
       html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
       js: ["true", '<i class="fab fa-js icon--stack"></i>'],
@@ -230,7 +230,7 @@ const Projects = {
     img: "img/project_icons/valueadd.jpg",
     webp: "img/project_icons/valueadd.webp",
     alt: "Rec. task - Simple landing page",
-    order: "53",
+    order: "3",
     stack: {
       html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
       js: ["true", '<i class="fab fa-js icon--stack"></i>'],
