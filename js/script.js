@@ -168,13 +168,13 @@ const Projects = {
       react: ["true", '<i class="fab fa-react icon--stack"></i>']
     }
   },
-  tictactoe: {
-    name: "TicTacToe",
-    live: "https://s.codepen.io/Rafi-R/debug/NjOwGV/YvAgOnRKbPYA",
-    src: "https://codepen.io/Rafi-R/pen/NjOwGV",
-    img: "img/project_icons/tictactoe.jpg",
-    webp: "img/project_icons/tictactoe.webp",
-    alt: "Game - simple and funny",
+  tictactoepro: {
+    name: "TicTacToe Pro",
+    live: "https://codepen.io/Rafi-R/full/vYBJgbV",
+    src: "https://codepen.io/Rafi-R/pen/vYBJgbV",
+    img: "img/project_icons/tictactoepro.jpg",
+    webp: "img/project_icons/tictactoepro.webp",
+    alt: "Advanced tic tac toe game",
     order: "50",
     stack: {
       html5: ["true", '<i class="fab fa-html5 icon--stack"></i>'],
@@ -237,11 +237,11 @@ Object.entries(Projects).forEach(([project, projectValue]) => {
   </div>
   <picture class="image__container portfolio-image__container">
     <source type="image/webp" srcset="${
-      projectValue.webp
+    projectValue.webp
     }" class="card__image portfolio-image" />
     <img src="${projectValue.img}" alt="${
     projectValue.alt
-  }" class="card__image portfolio-image" />
+    }" class="card__image portfolio-image" />
   </picture>`;
 
   let article = document.createElement("article");
@@ -278,7 +278,7 @@ const btnContact = document.querySelector(".btn--contact"),
 //   window.innerHeight = "400px";
 // });
 // navigate thgrough sections and set aria-hidden
-menu.addEventListener("click", function(e) {
+menu.addEventListener("click", function (e) {
   if (e.target) {
     let offset;
     const sectionTarget = e.target.getAttribute("href");
